@@ -94,7 +94,7 @@ python main.py
 
 - 项目主页: [GitHub Repository](https://github.com/your-username/Virtual-Coach)
 - 问题反馈: [Issues](https://github.com/your-username/Virtual-Coach/issues)
-- 邮箱: your-email@example.com
+- 邮箱: dujh22@mails.tsinghua.edu.cn
 
 ## 🙏 致谢
 
