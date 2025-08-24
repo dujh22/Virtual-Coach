@@ -2,10 +2,10 @@
     "user" : {
         "id" : 1, 
         "sex" : "female", 
-        "appeal": "双脚脚踝扭伤，韧带撕裂，治疗后需要康复训练", 
+        "appeal": "双脚脚踝扭伤，韧带撕裂，治疗后需要康复训练"
     },
     "Coacher_id" : 1, 
-    "train_trace" : 
+    "train_trace" : {
         "motion 1" : {
             "Intra" : {
                "1" : [
@@ -37,14 +37,14 @@
                         "rep" : 5, 
                         "Hints": [
                             {"type": "C3-2", 
-                            "content": "做的时候要注意一下膝盖的方向，要往外"},
-                            ]， 
+                            "content": "做的时候要注意一下膝盖的方向，要往外"}
+                            ], 
                         "Service": {
                             "type" : "Detail-guide Service", 
                             "reason": "治疗师看到用户连续做错了三个",
                             "issued_by": "coach" 
                             },
-                        "quality": "错误",
+                        "quality": "错误"
                     },
                     {
                         "rep" : 6, 
@@ -56,7 +56,7 @@
                             ],
                         "Service": {
                             },
-                        "quality": "正确",
+                        "quality": "正确"
                     },
                     {
                         "rep" : 7, 
@@ -111,14 +111,14 @@
                         "Hints": [],
                         "Services": {},
                         "quality": "正确"
-                    },                                                                                                              
+                    }                                                                                                            
                 ],
                "2" : [
                 {
                         "rep" : 1, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "1"},
+                            "content": "1"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -127,7 +127,7 @@
                         "rep" : 2, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "2"},
+                            "content": "2"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -136,7 +136,7 @@
                         "rep" : 3, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "3"},
+                            "content": "3"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -151,7 +151,7 @@
                         "rep" : 5, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "5"},
+                            "content": "5"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -166,7 +166,7 @@
                         "rep" : 7, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "7"},
+                            "content": "7"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -181,7 +181,7 @@
                         "rep" : 9, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "9"},
+                            "content": "9"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -190,11 +190,11 @@
                         "rep" : 10, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "10"},
+                            "content": "10"}
                             ],
                         "Services": {},
                         "quality": "正确"
-                    },
+                    }
                ],
                "3" : [
                 {
@@ -207,7 +207,7 @@
                         "rep" : 2, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "2"},
+                            "content": "2"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -216,7 +216,7 @@
                         "rep" : 3, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "3"},
+                            "content": "3"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -225,7 +225,7 @@
                         "rep" : 4, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "4"},
+                            "content": "4"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -234,7 +234,7 @@
                         "rep" : 5, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "5"},
+                            "content": "5"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -243,7 +243,7 @@
                         "rep" : 6, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "6"},
+                            "content": "6"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -252,7 +252,7 @@
                         "rep" : 7, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "7"},
+                            "content": "7"}
                             ],
                         "Services": {},
                         "quality": "正确"
@@ -273,7 +273,7 @@
                         "rep" : 10, 
                         "Hints": [
                             {"type": "C1", 
-                            "content": "10"},
+                            "content": "10"}
                             ],
                         "Services": {
                             "type" : "Sense-finding", 
@@ -281,66 +281,64 @@
                             "issued_by": "coach" 
                         },
                         "quality": "正确"
-                    },
+                    }
                 ]
             },
             "Inter" : {
-               "1" : 
-               {
-                "last_set_performance" : "mid", 
-                "UserQuery": "",
-                "CoachInterview" : "",
-                "Adujustment": {
-                    "Reps" : {
-                        "old" : 15, 
-                        "new" : 10
-                        }, 
-                    "standard" : None,
-                    "motion" : {
-                        "old" : "弓箭步",
-                        "new" : "弹力带弓箭步"
-                        },
-                    "reason" : "教练认为弓箭步的动作表现整体偏弱，需要多进行对抗训练"
-                    }
-                },
-               "2" : 
-               {
-                "last_set_performance" : "mid", 
-                "UserQuery": "", 
-                "CoachInterview" : "", 
-                "Adujustment": {
-                    "Reps" : None,
-                    "standard" : 
-                        [
-                        { 
-                            "quality_point": "right_side" // 本组为右腿下蹲的弹力带弓箭步动作
-                            "old" : 1, //调整前的阶数:开启右腿下蹲检测
-                            "new" : 0, //调整后的阶数:关闭右腿下蹲检测
-                            "levels" : 2, //总共的阶数（开/关 共两个状态）
+               "1" : {
+                    "last_set_performance" : "mid", 
+                    "UserQuery": "",
+                    "CoachInterview" : "",
+                    "Adujustment": {
+                        "Reps" : {
+                            "old" : 15, 
+                            "new" : 10
+                            }, 
+                        "standard" : null,
+                        "motion" : {
+                            "old" : "弓箭步",
+                            "new" : "弹力带弓箭步"
                             },
-                        { 
-                            "quality_point": "left_side" // 本组为左腿下蹲的弹力带弓箭步动作
-                            "old" : 0, //调整前的阶数:关闭左腿下蹲检测
-                            "new" : 1, //调整后的阶数:开启左腿下蹲检测
-                            "levels" : 2
-                            }
-                        ],
-                    "motion" : None,
-                    "reason" : "这一组锻炼右侧左侧膝盖，下一组锻炼左侧膝盖", 
-                    }
+                        "reason" : "教练认为弓箭步的动作表现整体偏弱，需要多进行对抗训练"
+                        }
                 },
-               "3" :
-               {
-                "last_set_performance" : "high", 
-                "UserQuery": "膝盖要保持什么姿态？" 
-                "CoachInterview" : "仔细感受一下刚才发力的感觉，如果有镜子，做动作的时候要观察自己膝盖的方向。", 
-                "Adujustment": {
-                    "Reps" : None, 
-                    "standard" : None,
-                    "motion" : None,
-                    "reason" : None, 
-                },     
-                        
+               "2" : {
+                    "last_set_performance" : "mid", 
+                    "UserQuery": "", 
+                    "CoachInterview" : "", 
+                    "Adujustment": {
+                        "Reps" : null,
+                        "standard" : 
+                            [
+                            { 
+                                "quality_point": "right_side",
+                                "old" : 1,
+                                "new" : 0, 
+                                "levels" : 2
+                                },
+                            { 
+                                "quality_point": "left_side",
+                                "old" : 0,
+                                "new" : 1,
+                                "levels" : 2
+                                }
+                            ],
+                        "motion" : null,
+                        "reason" : "这一组锻炼右侧左侧膝盖，下一组锻炼左侧膝盖"
+                        }
+                },
+               "3" : {
+                    "last_set_performance" : "high", 
+                    "UserQuery": "膝盖要保持什么姿态？", 
+                    "CoachInterview" : "仔细感受一下刚才发力的感觉，如果有镜子，做动作的时候要观察自己膝盖的方向。", 
+                    "Adujustment": {
+                        "Reps" : null, 
+                        "standard" : null,
+                        "motion" : null,
+                        "reason" : null
+                    }
                 }
             }
+        }
+    }
 }

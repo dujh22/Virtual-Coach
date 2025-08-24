@@ -1,0 +1,78 @@
+{
+    "user" : {
+        "id" : 2, 
+        "sex" : "female", 
+        "appeal": "两侧膝盖膑骨脱位，左侧较为严重，已有两年时间，用户希望进行恢复训练"
+    },
+    "Coacher_id" : 2, 
+    "train_trace" : {
+        "motion 2" : { 
+            "Intra" : {
+                "1" : {
+                    "motion": "dead_bug",
+                    "Hints": [
+                        {
+                            "type": "C1", 
+                            "content": "吸气",
+                            "start" : 30 
+                        },
+                        {
+                            "type": "C1", 
+                            "content": "吐气",
+                            "start" : 32
+                        },
+                        {
+                            "type": "C1", 
+                            "content": "吸气",
+                            "start" : 35 
+                        },
+                        {
+                            "type": "C1", 
+                            "content": "好，吐气",
+                            "start" : 37
+                        },
+                        {
+                            "type": "C3-2", 
+                            "content": "你吐的时候肋骨要收下来，不能顶上去",
+                            "start" : 42
+                        },
+                        {
+                            "type": "C1", 
+                            "content": "好，继续",
+                            "start" : 47
+                        },
+                        {
+                            "type": "C3-2", 
+                            "content": "这里收紧啊",
+                            "start" : 55
+                        },
+                        {
+                            "type": "C3-1", 
+                            "content": "不错",
+                            "start" : 61 
+                        },
+                        {
+                            "type": "C1", 
+                            "content": "好，最后一次",
+                            "start" : 71
+                        },
+                        {
+                            "type": "C3-2", 
+                            "content": "肋骨，注意肋骨（不能顶上去）",
+                            "start" : 73 
+                        }
+                    ],
+                    "Services": [
+                        {
+                            "type" : "Check-confirm", 
+                            "reason": "指导用户练习她不熟悉的动作",
+                            "issued_by": "coach", 
+                            "start" : 2, 
+                            "end" : 26
+                        } 
+                    ]
+                }
+            }
+        }
+    }
+}
