@@ -2031,130 +2031,33 @@
 \def\@copyrightpermission{%
   \ifcase\acm@copyrightmode\relax % none
   \or % acmcopyright
-   Permission to make digital or hard copies of all or part of this
-   work for personal or classroom use is granted without fee provided
-   that copies are not made or distributed for profit or commercial
-   advantage and that copies bear this notice and the full citation on
-   the first page. Copyrights for components of this work owned by
-   others than ACM must be honored. Abstracting with credit is
-   permitted. To copy otherwise, or republish, to post on servers or
-   to redistribute to lists, requires prior specific permission
-   and\hspace*{.5pt}/or
-   a fee. Request permissions from permissions@acm.org.
+  允许个人或课堂使用本作品全部或部分内容制作数字或硬拷贝，无需付费，但前提是这些拷贝不得用于盈利或商业目的，且拷贝的首页必须带有本声明及完整引用信息。对于本作品中不属于美国计算机协会（ACM）的部分，其版权必须得到尊重。经署名的摘要使用是允许的。否则，如需复制、重新发布、在服务器上张贴或重新分发给列表，需事先获得特定许可并/或支付费用。请向permissions@acm.org申请许可。 
   \or % acmlicensed
-   Permission to make digital or hard copies of all or part of this
-   work for personal or classroom use is granted without fee provided
-   that copies are not made or distributed for profit or commercial
-   advantage and that copies bear this notice and the full citation on
-   the first page. Copyrights for components of this work owned by
-   others than the author(s) must be honored. Abstracting with credit
-   is permitted. To copy otherwise, or republish, to post on servers
-   or to redistribute to lists, requires prior specific permission
-   and\hspace*{.5pt}/or a fee. Request permissions from
-   permissions@acm.org.
+  允许个人或课堂使用本作品全部或部分内容制作数字或硬拷贝，无需付费，但前提是这些拷贝不得用于盈利或商业目的，且拷贝的首页必须带有本声明及完整引用信息。对于本作品中不属于美国计算机协会（ACM）的部分，其版权必须得到尊重。经署名的摘要使用是允许的。否则，如需复制、重新发布、在服务器上张贴或重新分发给列表，需事先获得特定许可并/或支付费用。请向permissions@acm.org申请许可。 
   \or % rightsretained
-   Permission to make digital or hard copies of all or part of this
-   work for personal or classroom use is granted without fee provided
-   that copies are not made or distributed for profit or commercial
-   advantage and that copies bear this notice and the full citation on
-   the first page. Copyrights for third-party components of this work
-   must be honored. For all other uses, contact the
-   owner\hspace*{.5pt}/author(s).
+  允许个人或课堂使用本作品全部或部分内容制作数字或硬拷贝，无需付费，但前提是这些拷贝不得用于盈利或商业目的，且拷贝的首页必须带有本声明及完整引用信息。对于本作品中不属于美国计算机协会（ACM）的部分，其版权必须得到尊重。经署名的摘要使用是允许的。否则，如需复制、重新发布、在服务器上张贴或重新分发给列表，需事先获得特定许可并/或支付费用。请向permissions@acm.org申请许可。 
   \or % usgov
-   This paper is authored by an employee(s) of the United States
-   Government and is in the public domain. Non-exclusive copying or
-   redistribution is allowed, provided that the article citation is
-   given and the authors and agency are clearly identified as its
-   source. Request permissions from
-   owner\hspace*{.5pt}/author(s).
+  本作品由美国政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % usgovmixed
-   ACM acknowledges that this contribution was authored or co-authored
-   by an employee, contractor, or affiliate of the United States
-   government. As such, the United States government retains a
-   nonexclusive, royalty-free right to publish or reproduce this
-   article, or to allow others to do so, for government purposes
-   only. Request permissions from owner\hspace*{.5pt}/author(s).
+  本作品由美国政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % cagov
-   This article was authored by employees of the Government of
-   Canada. As such, the Canadian government retains all interest in
-   the copyright to this work and grants to ACM a nonexclusive,
-   royalty-free right to publish or reproduce this article, or to
-   allow others to do so, provided that clear attribution is given
-   both to the authors and the Canadian government agency employing
-   them. Permission to make digital or hard copies for personal or
-   classroom use is granted. Copies must bear this notice and the full
-   citation on the first page. Copyrights for components of this work
-   owned by others than the Canadian Government must be honored. To
-   copy otherwise, distribute, republish, or post, requires prior
-   specific permission and/or a fee. Request permissions from
-   owner\hspace*{.5pt}/author(s).
+  本作品由加拿大政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % cagovmixed
-   ACM acknowledges that this contribution was co-authored by an
-   affiliate of the national government of Canada. As such, the Crown
-   in Right of Canada retains an equal interest in the
-   copyright. Reprints must include clear attribution to ACM and the
-   author’s government agency affiliation. Permission to make digital
-   or hard copies for personal or classroom use is granted. Copies
-   must bear this notice and the full citation on the first
-   page. Copyrights for components of this work owned by others than
-   ACM must be honored. To copy otherwise, distribute, republish, or
-   post, requires prior specific permission and/or a fee. Request
-   permissions from owner\hspace*{.5pt}/author(s).
+  本作品由加拿大政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % licensedusgovmixed
-   Publication rights licensed to ACM\@. ACM acknowledges that this
-   contribution was authored or co-authored by an employee, contractor
-   or affiliate of the United States government. As such, the
-   Government retains a nonexclusive, royalty-free right to publish or
-   reproduce this article, or to allow others to do so, for Government
-   purposes only. Request permissions from
-   owner\hspace*{.5pt}/author(s).
+  本作品由美国政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % licensedcagov
-   This article was authored by employees of the Government of
-   Canada. As such, the Canadian government retains all interest in
-   the copyright to this work and grants to ACM a nonexclusive,
-   royalty-free right to publish or reproduce this article, or to
-   allow others to do so, provided that clear attribution is given
-   both to the authors and the Canadian government agency employing
-   them. Permission to make digital or hard copies for personal or
-   classroom use is granted. Copies must bear this notice and the full
-   citation on the first page. Copyrights for components of this work
-   owned by others than the Canadian Government must be honored. To
-   copy otherwise, distribute, republish, or post, requires prior
-   specific permission and/or a fee. Request permissions from
-   owner\hspace*{.5pt}/author(s).
+  本作品由加拿大政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % licensedcagovmixed
-   Publication rights licensed to ACM. ACM acknowledges that this
-   contribution was authored or co-authored by an employee, contractor
-   or affiliate of the national government of Canada. As such, the
-   Government retains a nonexclusive, royalty-free right to publish or
-   reproduce this article, or to allow others to do so, for Government
-   purposes only. Request permissions from
-   owner\hspace*{.5pt}/author(s).
+  本作品由加拿大政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % othergov
-   ACM acknowledges that this contribution was authored or co-authored
-   by an employee, contractor or affiliate of a national
-   government. As such, the Government retains a nonexclusive,
-   royalty-free right to publish or reproduce this article, or to
-   allow others to do so, for Government purposes only. Request
-   permissions from owner\hspace*{.5pt}/author(s).
+  本作品由美国政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
   \or % licensedothergov
-   Publication rights licensed to ACM\@. ACM acknowledges that this
-   contribution was authored or co-authored by an employee, contractor
-   or affiliate of a national government. As such, the Government
-   retains a nonexclusive, royalty-free right to publish or reproduce
-   this article, or to allow others to do so, for Government purposes
-   only. Request permissions from owner\hspace*{.5pt}/author(s).
+  本作品由美国政府雇员创作，属于公共领域。非排他性复制或重新分发是允许的，前提是必须给出文章引用并明确指出其来源为作者和机构。请向owner/author(s)申请许可。 
  \or % iw3c2w3
-   This paper is published under the Creative Commons Attribution~4.0
-   International (CC-BY~4.0) license. Authors reserve their rights to
-   disseminate the work on their personal and corporate Web sites with
-   the appropriate attribution.
+  本作品在知识共享署名4.0国际（CC-BY~4.0）许可下发布。作者保留其权利，可以在个人和企业网站上传播作品，并适当注明出处。
  \or % iw3c2w3g
-   This paper is published under the Creative Commons
-   Attribution-NonCommercial-NoDerivs~4.0 International
-   (CC-BY-NC-ND~4.0) license. Authors reserve their rights to
-   disseminate the work on their personal and corporate Web sites with
-   the appropriate attribution.
+  本作品在知识共享署名-非商业性-无改编4.0国际（CC-BY-NC-ND~4.0）许可下发布。作者保留其权利，可以在个人和企业网站上传播作品，并适当注明出处。
  \or % CC
    \IfEq{\ACM@cc@type}{zero}{%
      \def\ACM@CC@Url{https://creativecommons.org/publicdomain/zero/1.0}}{%

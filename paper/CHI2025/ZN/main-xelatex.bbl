@@ -1,0 +1,153 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{10}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Chen et~al\mbox{.}(2025)]%
+        {chenDeepMathCreativeBenchmarkEvaluating2025}
+\bibfield{author}{\bibinfo{person}{Xiaoyang Chen}, \bibinfo{person}{Xinan Dai}, \bibinfo{person}{Yu Du}, \bibinfo{person}{Qian Feng}, {and} \bibinfo{person}{Naixu Guo}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{{DeepMath-Creative}}: {{A Benchmark}} for {{Evaluating Mathematical Creativity}} of {{Large Language Models}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2505.08744}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Chi et~al\mbox{.}(2001)]%
+        {chiLearningHumanTutoring2001}
+\bibfield{author}{\bibinfo{person}{Michelene~T.H. Chi}, \bibinfo{person}{Stephanie~A. Siler}, \bibinfo{person}{Heisawn Jeong}, \bibinfo{person}{Takashi Yamauchi}, {and} \bibinfo{person}{Robert~G. Hausmann}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Learning from Human Tutoring}.
+\newblock \bibinfo{journal}{\emph{Cognitive Science}} \bibinfo{volume}{25}, \bibinfo{number}{4} (\bibinfo{year}{2001}), \bibinfo{pages}{471--533}.
+\newblock
+\showISSN{1551-6709}
+\urldef\tempurl%
+\url{https://onlinelibrary.wiley.com/doi/abs/10.1207/s15516709cog2504_1}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Connor and O'Neill(2023)]%
+        {connorLargeLanguageModels2023}
+\bibfield{author}{\bibinfo{person}{Mark Connor} {and} \bibinfo{person}{Michael O'Neill}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Large {{Language Models}} in {{Sport Science}} \& {{Medicine}}: {{Opportunities}}, {{Risks}} and {{Considerations}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2305.03851}
+\showURL{%
+\tempurl}
+
+
+\bibitem[DeepSeek-AI et~al\mbox{.}(2025)]%
+        {deepseek-aiDeepSeekR1IncentivizingReasoning2025b}
+\bibfield{author}{\bibinfo{person}{DeepSeek-AI}, \bibinfo{person}{Daya Guo}, \bibinfo{person}{Dejian Yang}, \bibinfo{person}{Haowei Zhang}, {and} \bibinfo{person}{Junxiao Song}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{{DeepSeek-R1}}: {{Incentivizing Reasoning Capability}} in {{LLMs}} via {{Reinforcement Learning}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2501.12948}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Goldbach and Hamza-Lup(2020)]%
+        {goldbachIntelligentTutoringSystems2020}
+\bibfield{author}{\bibinfo{person}{Ioana~R. Goldbach} {and} \bibinfo{person}{Felix~G. Hamza-Lup}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Intelligent {{Tutoring Systems}} for {{Generation Z}}'s {{Addiction}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2005.05024}
+\showURL{%
+\tempurl}
+
+
+\bibitem[He et~al\mbox{.}(2025)]%
+        {heSurveyLargeLanguage2025}
+\bibfield{author}{\bibinfo{person}{Kai He}, \bibinfo{person}{Rui Mao}, \bibinfo{person}{Qika Lin}, \bibinfo{person}{Yucheng Ruan}, \bibinfo{person}{Xiang Lan}, \bibinfo{person}{Mengling Feng}, {and} \bibinfo{person}{Erik Cambria}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{A Survey of Large Language Models for Healthcare: From Data, Technology, and Applications to Accountability and Ethics}.
+\newblock \bibinfo{journal}{\emph{Information Fusion}}  \bibinfo{volume}{118} (\bibinfo{year}{2025}), \bibinfo{pages}{102963}.
+\newblock
+\showISSN{1566-2535}
+\urldef\tempurl%
+\url{https://www.sciencedirect.com/science/article/pii/S1566253525000363}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Jain et~al\mbox{.}(2024)]%
+        {jainLiveCodeBenchHolisticContamination2024}
+\bibfield{author}{\bibinfo{person}{Naman Jain}, \bibinfo{person}{King Han}, \bibinfo{person}{Alex Gu}, \bibinfo{person}{Wen-Ding Li}, {and} \bibinfo{person}{Fanjia Yan}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{{LiveCodeBench}}: {{Holistic}} and {{Contamination Free Evaluation}} of {{Large Language Models}} for {{Code}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2403.07974}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Kwon et~al\mbox{.}(2024)]%
+        {kwonBIPEDPedagogicallyInformed2024}
+\bibfield{author}{\bibinfo{person}{Soonwoo Kwon}, \bibinfo{person}{Sojung Kim}, \bibinfo{person}{Minju Park}, \bibinfo{person}{Seunghyun Lee}, {and} \bibinfo{person}{Kyuseok Kim}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{{BIPED}}: {{Pedagogically Informed Tutoring System}} for {{ESL Education}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2406.03486}
+\showURL{%
+\tempurl}
+
+
+\bibitem[OpenAI et~al\mbox{.}(2024)]%
+        {openaiOpenAIO1System2024a}
+\bibfield{author}{\bibinfo{person}{OpenAI}, \bibinfo{person}{Aaron Jaech}, \bibinfo{person}{Adam Kalai}, \bibinfo{person}{Adam Lerer}, {and} \bibinfo{person}{Adam Richardson}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{{OpenAI}} O1 {{System Card}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2412.16720}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Wang et~al\mbox{.}(2024)]%
+        {wangLargeLanguageModels2024}
+\bibfield{author}{\bibinfo{person}{Shen Wang}, \bibinfo{person}{Tianlong Xu}, \bibinfo{person}{Hang Li}, \bibinfo{person}{Chaoli Zhang}, {and} \bibinfo{person}{Joleen Liang}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Large {{Language Models}} for {{Education}}: {{A Survey}} and {{Outlook}}}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/2403.18105}
+\showURL{%
+\tempurl}
+
+
+\end{thebibliography}
