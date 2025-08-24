@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.23)  24 AUG 2025 16:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.6.23)  24 AUG 2025 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1309,161 +1309,64 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip80
 \f@nch@widthR=\skip81
 \@temptokenb=\toks37
-) Special comment 'acks') (/usr/local/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
-Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
- (/usr/local/texlive/2025/texmf-dist/tex/latex/ctex/ctexhook.sty
-Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
-Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
-)
-\l__xeCJK_tmp_int=\count332
-\l__xeCJK_tmp_box=\box64
-\l__xeCJK_tmp_dim=\dimen197
-\l__xeCJK_tmp_skip=\skip82
-\g__xeCJK_space_factor_int=\count333
-\l__xeCJK_begin_int=\count334
-\l__xeCJK_end_int=\count335
-\c__xeCJK_CJK_class_int=\XeTeXcharclass1
-\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
-\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
-\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
-\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
-\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
-\c__xeCJK_CM_class_int=\XeTeXcharclass7
-\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
-\l__xeCJK_last_skip=\skip83
-\c__xeCJK_none_node=\count336
-\g__xeCJK_node_int=\count337
-\c__xeCJK_CJK_node_dim=\dimen198
-\c__xeCJK_CJK-space_node_dim=\dimen199
-\c__xeCJK_default_node_dim=\dimen256
-\c__xeCJK_CJK-widow_node_dim=\dimen257
-\c__xeCJK_normalspace_node_dim=\dimen258
-\c__xeCJK_default-space_node_skip=\skip84
-\l__xeCJK_ccglue_skip=\skip85
-\l__xeCJK_ecglue_skip=\skip86
-\l__xeCJK_punct_kern_skip=\skip87
-\l__xeCJK_indent_box=\box65
-\l__xeCJK_last_penalty_int=\count338
-\l__xeCJK_last_bound_dim=\dimen259
-\l__xeCJK_last_kern_dim=\dimen260
-\l__xeCJK_widow_penalty_int=\count339
-
-LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
-(template)           argument(s) on line 2396.
-
-\l__xeCJK_fixed_punct_width_dim=\dimen261
-\l__xeCJK_mixed_punct_width_dim=\dimen262
-\l__xeCJK_middle_punct_width_dim=\dimen263
-\l__xeCJK_fixed_margin_width_dim=\dimen264
-\l__xeCJK_mixed_margin_width_dim=\dimen265
-\l__xeCJK_middle_margin_width_dim=\dimen266
-\l__xeCJK_bound_punct_width_dim=\dimen267
-\l__xeCJK_bound_margin_width_dim=\dimen268
-\l__xeCJK_margin_minimum_dim=\dimen269
-\l__xeCJK_kerning_total_width_dim=\dimen270
-\l__xeCJK_same_align_margin_dim=\dimen271
-\l__xeCJK_different_align_margin_dim=\dimen272
-\l__xeCJK_kerning_margin_width_dim=\dimen273
-\l__xeCJK_kerning_margin_minimum_dim=\dimen274
-\l__xeCJK_bound_dim=\dimen275
-\l__xeCJK_reverse_bound_dim=\dimen276
-\l__xeCJK_margin_dim=\dimen277
-\l__xeCJK_minimum_bound_dim=\dimen278
-\l__xeCJK_kerning_margin_dim=\dimen279
-\g__xeCJK_family_int=\count340
-\l__xeCJK_fam_int=\count341
-\g__xeCJK_fam_allocation_int=\count342
-\l__xeCJK_verb_case_int=\count343
-\l__xeCJK_verb_exspace_skip=\skip88
- (/usr/local/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
-File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
-))
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 74.
-\c@theorem=\count344
+) Special comment 'acks')
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 18.
+\c@theorem=\count332
  (/usr/local/texlive/2025/texmf-dist/tex/latex/preprint/balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
-\oldvsize=\dimen280
-) Excluding comment 'screenonly' Include comment 'printonly' Include comment 'anonsuppress'
-
-Package xeCJK Warning: Fandol is being set as the default font for CJK text.
-(xeCJK)                Please make sure it has been properly installed.
-
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolSong-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FandolSong-Regular(0)' created for font
-(fontspec)             'FandolSong-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold},ItalicFont={FandolKai-Regular}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
-
-(./main-xelatex.aux)
+\oldvsize=\dimen197
+) Excluding comment 'screenonly' Include comment 'printonly' Include comment 'anonsuppress' (./main-xelatex.aux)
 \openout1 = `main-xelatex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 74.
+(Font)              scaled to size 7.0pt on input line 18.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 7.26596pt on input line 74.
+(Font)              scaled to size 7.26596pt on input line 18.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 5.18997pt on input line 74.
+(Font)              scaled to size 5.18997pt on input line 18.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.2666pt on input line 74.
+(Font)              scaled to size 7.2666pt on input line 18.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 5.19043pt on input line 74.
+(Font)              scaled to size 5.19043pt on input line 18.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.26521pt on input line 74.
+(Font)              scaled to size 7.26521pt on input line 18.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 5.18944pt on input line 74.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+(Font)              scaled to size 5.18944pt on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Info: Redefining \microtypecontext on input line 74.
-Package microtype Info: Applying patch `item' on input line 74.
-Package microtype Info: Applying patch `toc' on input line 74.
-Package microtype Info: Applying patch `eqnum' on input line 74.
-Package microtype Info: Applying patch `footnote' on input line 74.
-Package microtype Info: Applying patch `verbatim' on input line 74.
-LaTeX Info: Redefining \microtypesetup on input line 74.
+LaTeX Info: Redefining \microtypecontext on input line 18.
+Package microtype Info: Applying patch `item' on input line 18.
+Package microtype Info: Applying patch `toc' on input line 18.
+Package microtype Info: Applying patch `eqnum' on input line 18.
+Package microtype Info: Applying patch `footnote' on input line 18.
+Package microtype Info: Applying patch `verbatim' on input line 18.
+LaTeX Info: Redefining \microtypesetup on input line 18.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1473,7 +1376,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinLibertine' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring OFF on input line 74.
+Package hyperref Info: Link coloring OFF on input line 18.
  (./main-xelatex.out) (./main-xelatex.out)
 \@outlinefile=\write4
 \openout4 = `main-xelatex.out'.
@@ -1518,52 +1421,29 @@ Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 167.
-
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolHei-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
-
+(Font)              scaled to size 17.28pt on input line 76.
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 167.
+(Font)              scaled to size 17.28pt on input line 76.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinBiolinum' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Package fontspec Info: 
-(fontspec)             Font family 'FandolHei-Regular(0)' created for font
-(fontspec)             'FandolHei-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf},BoldFont={FandolHei-Bold}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
-
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 167.
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 167.
+(Font)              scaled to size 17.28pt on input line 76.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 167.
+(Font)              scaled to size 12.0pt on input line 76.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 167.
+(Font)              scaled to size 10.0pt on input line 76.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 10.37994pt on input line 167.
+(Font)              scaled to size 10.37994pt on input line 76.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LibertinusMath-Regular.otf' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 10.38086pt on input line 167.
+(Font)              scaled to size 10.38086pt on input line 76.
 LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 10.37888pt on input line 167.
+(Font)              scaled to size 10.37888pt on input line 76.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1576,91 +1456,107 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: sampleteaser.pdf Graphic file (type pdf)
 <use sampleteaser.pdf>
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 167.
+(Font)              scaled to size 9.0pt on input line 76.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
-(Font)              scaled to size 7.0pt on input line 167.
+(Font)              scaled to size 7.0pt on input line 76.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 7.47354pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 5.60515pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 9.34277pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.47421pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 5.60565pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 9.34099pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.47278pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 5.60458pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 8.30396pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
-(Font)              scaled to size 6.22797pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 8.30469pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 6.22852pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 8.3031pt on input line 167.
-LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 6.22733pt on input line 167.
+(Font)              scaled to size 10.95pt on input line 76.
 
-Overfull \hbox (10.59462pt too wide) in paragraph at lines 167--167
-\TU/LinLibertine(0)/m/n/8 Jinhua Du, Mufeng Xing, Ziheng Zhou, Ruilin Zhang, Zhongshi Liu, and Zexun
+Overfull \hbox (3.25352pt too wide) in paragraph at lines 76--76
+\TU/LinLibertine(0)/m/n/9 educational systems still struggle to achieve individualized decision-
  []
 
 
 
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 7.47354pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 5.60515pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 9.34277pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 7.47421pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 5.60565pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 9.34099pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 7.47278pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 5.60458pt on input line 76.
 
-Underfull \vbox (badness 1168) has occurred while \output is active []
+Overfull \hbox (21.36679pt too wide) in paragraph at lines 76--76
+\TU/LinLibertine(0)/m/n/9 Interactive Motion Tutoring; Agentic Framework, Personalized Decision-
+ []
+
+
+Overfull \hbox (1.20381pt too wide) in paragraph at lines 76--76
+\TU/LinLibertine(0)/m/n/9 Making, Large Language Models (LLMs), Data Augmentation, Feed-
+ []
+
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 8.30396pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(1)/m/n' will be
+(Font)              scaled to size 6.22797pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 8.30469pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 6.22852pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 8.3031pt on input line 76.
+LaTeX Font Info:    Font shape `TU/LibertinusMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 6.22733pt on input line 76.
+
+Overfull \hbox (10.59464pt too wide) in paragraph at lines 76--76
+\TU/LinLibertine(0)/m/n/8 Jinhua Du, Mufeng Xing, Ziheng Zhou, Ruilin Zhang, Zhongshi Liu, and Zexun
+ []
+
+
+Overfull \hbox (13.90855pt too wide) in paragraph at lines 76--76
+\TU/LinLibertine(0)/m/n/8 Jiang. 2018. EDMIT: An End-to-End Agentic Framework for Enhanced Decision-
+ []
+
+
+Overfull \hbox (9.3075pt too wide) in paragraph at lines 80--81
+\TU/LinLibertine(0)/m/n/9 model (LLM)-based technologies—numerous intelligent systems have
+ []
 
 
 
 [1.1
 
 ]
+Overfull \hbox (7.30576pt too wide) in paragraph at lines 82--83
+\TU/LinLibertine(0)/m/n/9 marily built upon AI models coupled with fixed prompt-based query–
+ []
 
-Package fontspec Info: 
-(fontspec)             Script 'CJK' not explicitly supported within font
-(fontspec)             'FandolFang-Regular'. Check the typeset output, and if
-(fontspec)             it is okay then ignore this warning. Otherwise a
-(fontspec)             different font should be chosen.
 
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `inconsolata' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+Overfull \hbox (5.65527pt too wide) in paragraph at lines 84--85
+[]\TU/LinLibertine(0)/m/n/9 Taking interactive motion tutoring as an example, human coaches
+ []
 
-Package fontspec Info: 
-(fontspec)             Font family 'FandolFang-Regular(0)' created for font
-(fontspec)             'FandolFang-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dflt;"
 
- Processing 'acks' comment.
-\openout3 = `comment.cut'.
+Overfull \hbox (3.56853pt too wide) in paragraph at lines 86--87
+\TU/LinLibertine(0)/m/n/9 to-end agentic framework designed to enhance the decision-making
+ []
 
- Comment 'acks' writing to comment.cut. Straight input of comment.cut. (./comment.cut) (./main-xelatex.bbl
-Underfull \vbox (badness 2653) has occurred while \output is active []
+
+Overfull \hbox (3.09578pt too wide) in paragraph at lines 90--91
+[]\TU/LinLibertine(0)/b/n/9 RQ2\TU/LinLibertine(0)/m/n/9 : How can we design an effective decision-augmentation
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+(./main-xelatex.bbl
 LaTeX Info: Redefining \tempurl on input line 58.
 LaTeX Info: Redefining \tempurl on input line 69.
 LaTeX Info: Redefining \tempurl on input line 80.
@@ -1682,7 +1578,9 @@ Package balance Warning: You have called \balance in second column
 (balance)                Columns might not be balanced.
 
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 241.
+(Font)              scaled to size 9.0pt on input line 113.
+LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 113.
 (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/se-utf32be.def
@@ -1690,18 +1588,18 @@ File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 ) [2.2] (./main-xelatex.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2022/08/05>
+L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main-xelatex.out' has not changed.
-(rerunfilecheck)             Checksum: F564171AF1A48542B9F96F6CAC714CDA;1366.
+(rerunfilecheck)             Checksum: 14078D55931444240F4F9D672191F043;434.
  ) 
 Here is how much of TeX's memory you used:
- 34092 strings out of 473832
- 698016 string characters out of 5729481
- 1247578 words of memory out of 5000000
- 56561 multiletter control sequences out of 15000+600000
- 568406 words of font info for 169 fonts, out of 8000000 for 9000
+ 32299 strings out of 473832
+ 630439 string characters out of 5729481
+ 1184166 words of memory out of 5000000
+ 54812 multiletter control sequences out of 15000+600000
+ 567704 words of font info for 149 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
- 105i,12n,131p,1005b,32971s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,12n,131p,1575b,32971s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main-xelatex.pdf (2 pages).
