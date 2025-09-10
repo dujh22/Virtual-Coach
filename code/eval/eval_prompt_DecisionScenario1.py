@@ -4,6 +4,7 @@ import sys
 import re
 from datetime import datetime
 from tqdm import tqdm
+import time
 
 
 # 添加项目根目录到 Python 路径
@@ -149,6 +150,7 @@ def evaluate_accuracy():
         response_json = None
         successful_times = None
 
+        start_time = time.time()
         # 尝试3次获取有效响应
         for times in range(3):
             try:
@@ -175,7 +177,7 @@ def evaluate_accuracy():
         if response_json is not None and successful_times is not None:
             ground_truth = eval_dataset[i]["output"]
             temp_data_result["ground_truth"] = ground_truth
-
+            temp_data_result["time_cost"] = time.time() - start_time
             try:
                 if response_json["performance_class"] == ground_truth["performance_class"]:
                     temp_data_result["is_correct"] = True
@@ -197,6 +199,9 @@ def evaluate_accuracy():
 
     eval_dataset_result = []
     correct = 0
+    all_time = 0
+    min_time = 0
+    max_time = 0
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         # tqdm 结合 as_completed 实现进度条
@@ -206,12 +211,20 @@ def evaluate_accuracy():
             eval_dataset_result.append(result)
             if result.get("is_correct"):
                 correct += 1
+            time_cost = result.get("time_cost")
+            all_time += time_cost
+            min_time = min(min_time, time_cost)
+            max_time = max(max_time, time_cost)
 
     accuracy = correct / total if total > 0 else 0.0
+    average_time = all_time / total if total > 0 else 0.0
     print(f"\n✅ 评测完成：")
     print(f"总样本数: {total}")
     print(f"正确数: {correct}")
     print(f"准确率: {accuracy:.2%}")
+    print(f"平均耗时: {average_time:.2f}秒")
+    print(f"最小耗时: {min_time:.2f}秒")
+    print(f"最大耗时: {max_time:.2f}秒")
 
     with open(eval_dataset_result_file, "w", encoding="utf-8") as f:
         json.dump(eval_dataset_result, f, ensure_ascii=False, indent=4)
