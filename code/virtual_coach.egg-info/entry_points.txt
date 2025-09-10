@@ -1,0 +1,2 @@
+[console_scripts]
+virtual-coach = main:main

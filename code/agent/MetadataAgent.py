@@ -7,7 +7,7 @@ import shutil
 from tqdm import tqdm
 from typing import Any, Dict, List, Tuple, Union, Mapping, Callable, Literal
 
-from prompts.metadata_agent import ch_to_en_en, en_to_ch_en, generate_constant_based_on_induction_en, generate_cases_by_deduction_en, get_answer_en, check_answer_en, generate_variable_by_analogy_en, validate_variable_en
+from ..prompts.metadata_agent import ch_to_en_en, en_to_ch_en, generate_constant_based_on_induction_en, generate_cases_by_deduction_en, get_answer_en, check_answer_en, generate_variables_by_analogy_en, validate_variables_en
 
 # define the JSON-style data types that are accepted
 JSONType = Union[
@@ -64,7 +64,7 @@ class MetadataAgent:
         """
         model_name_str = re.sub(r'[^a-zA-Z0-9]', '_', model_name).lower()
         try:
-            model_module = importlib.import_module(f"models.{model_name_str}")
+            model_module = importlib.import_module(f"..models.{model_name_str}", package=__name__)
             return model_module.llm_response(prompt)
         except Exception as e:
             print(f"Error in get_llm_response: {e}")
@@ -555,7 +555,7 @@ class MetadataAgent:
         if extra_case is not None:
             self.add_case_by_list(extra_case)
     
-        generate_variable_by_analogy_prompt = generate_variable_by_analogy_en.format(metadata_name=self.metadata_name, metadata_constant=self.constant, cases=self.cases, extra_constant=extra_constant, extra_other_info=extra_other_info)
+        generate_variable_by_analogy_prompt = generate_variables_by_analogy_en.format(metadata_name=self.metadata_name, metadata_constant=self.constant, cases=self.cases, extra_constant=extra_constant, extra_other_info=extra_other_info)
         for i in tqdm(range(10), desc="Generate variable by analogy"):
             response = self.get_llm_response(generate_variable_by_analogy_prompt, self.model_name)
             response = self.extract_last_complete_json(response)
@@ -572,7 +572,7 @@ class MetadataAgent:
         判断变量是否合理,如果有不合理的地方,则进行修改。
         :return: 是否合理。
         """
-        judge_variable_prompt = validate_variable_en.format(metadata_name=self.metadata_name, metadata_constant=self.constant, cases=self.cases, variable=self.variable, extra_info=extra_info)
+        judge_variable_prompt = validate_variables_en.format(metadata_constant=self.constant, cases=self.cases, variables=self.variable, extra_info=extra_info)
         for i in tqdm(range(10), desc="Judge variable"):
             response = self.get_llm_response(judge_variable_prompt, self.model_name)
             response = self.extract_last_complete_json(response)

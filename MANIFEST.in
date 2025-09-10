@@ -1,0 +1,30 @@
+# 包含所有 Python 文件
+recursive-include code *.py
+recursive-include data *.py *.json
+recursive-include paper *.tex *.pdf *.png *.jpg *.jpeg *.gif *.bmp
+
+# 包含文档文件
+include README.md
+include README_EN.md
+include requirements.txt
+include LICENSE
+
+# 包含配置文件
+include setup.py
+include MANIFEST.in
+
+# 排除不需要的文件
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude *.log
+global-exclude *.aux
+global-exclude *.bbl
+global-exclude *.blg
+global-exclude *.out
+global-exclude *.synctex.gz
+global-exclude *.toc
+global-exclude *.fdb_latexmk
+global-exclude *.fls
+global-exclude *.cut

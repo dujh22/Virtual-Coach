@@ -7,18 +7,11 @@ DecisionScenario1 = """
 
 系统会提供三类输入信息：
 
-训练表现数据 (JSON)
+训练表现数据 (JSON): {training_performance}
 
-"training performance": {
-    "high_quality_reps": <Integer>,
-    "error_reps": <Integer>,
-    "most_frequent_error_type": <String or null>
-}
+动作名称 (String): {exercise_name}
 
-动作名称 (String)
-例子："卧推"、"深蹲"
-动作重复次数设定 (Integer)
-例子：10
+动作重复次数设定 (Integer): {set_reps}
 
 
 # 处理逻辑（范式）
@@ -53,20 +46,22 @@ Class C（表现出色，基本无可挑剔）：
 
 输出时请遵循以下格式：
 ```json
-{
+{{
   "exercise_name": "<动作名称>",
   "set_reps": <动作设定次数>,
   "performance_class": "A | B | C",
   "reason": "<简短解释，说明分类依据>"
-}
+}}
 ```
 示例：
 ```json
-{
+{{
   "exercise_name": "卧推",
   "set_reps": 8,
   "performance_class": "A",
   "reason": "本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。"
-}
+}}
 ```
+
+请给出直接输出，不需要写代码。
 """

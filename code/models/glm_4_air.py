@@ -2,7 +2,7 @@ import requests
 import json
 
 # 定义厂商信息列表
-from api_keys import GLM_URL, GLM_API_KEY, GLM_MODEL
+from .api_keys import GLM_URL, GLM_API_KEY, GLM_MODEL
 
 
 def llm_response(user_dialogue=None, system_prompt=None, history_messages=None):

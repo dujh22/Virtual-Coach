@@ -1,3 +1,60 @@
+Metadata-Version: 2.4
+Name: virtual-coach
+Version: 1.0.0
+Summary: 基于大语言模型的智能虚拟教练交互式课程生成系统
+Home-page: https://github.com/your-username/Virtual-Coach
+Author: Virtual Coach Team
+Author-email: dujh22@mails.tsinghua.edu.cn
+License: MIT
+Project-URL: Bug Reports, https://github.com/your-username/Virtual-Coach/issues
+Project-URL: Source, https://github.com/your-username/Virtual-Coach
+Keywords: ai,llm,virtual-coach,education,training,fitness,metadata,agent,chinese,english
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: tqdm>=4.60.0
+Requires-Dist: typing-extensions>=3.10.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.10; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.8; extra == "dev"
+Requires-Dist: mypy>=0.800; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=0.5; extra == "docs"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
 # Virtual Coach (虚拟教练)
 
 基于大语言模型的智能虚拟教练交互式课程生成系统

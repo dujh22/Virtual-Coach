@@ -2,7 +2,7 @@ import requests
 import json
 
 # 定义厂商信息列表
-from api_keys import KEDAXUNFEI_URL, KEDAXUNFEI_API_KEY, KEDAXUNFEI_MODEL
+from .api_keys import KEDAXUNFEI_URL, KEDAXUNFEI_API_KEY, KEDAXUNFEI_MODEL
 
 
 def llm_response(user_dialogue=None, system_prompt=None, history_messages=None):
