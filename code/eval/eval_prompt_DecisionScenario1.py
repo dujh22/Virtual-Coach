@@ -40,53 +40,88 @@ os.makedirs(os.path.dirname(eval_dataset_result_file), exist_ok=True)
 def extract_last_complete_json(text: str):
     """
     提取文本中的最后一个完整的JSON对象
+    修复点：
+    1. 修正正则表达式，去除多余的转义符，确保能正确匹配 ```json ... ``` 代码块
+    2. 修正字符串转义处理逻辑，确保能正确处理字符串中的转义字符
+    3. 修复：部分模型输出没有 ```json ...``` 包裹，直接输出 json 或前后有多余内容
+    4. 修复：部分模型输出有多余的反斜杠或特殊转义符，尝试预处理
     """
+    # 优先匹配 ```json ... ``` 代码块
     _CODE_BLOCK_RE = re.compile(r"```json\s*(.*?)\s*```", re.S)
 
     def _try_load(blob: str):
+        # 先尝试直接解析
         try:
             return json.loads(blob)
         except json.JSONDecodeError:
-            return None
+            pass
+        # 尝试去除多余转义符
+        try:
+            blob2 = blob.encode('utf-8').decode('unicode_escape')
+            return json.loads(blob2)
+        except Exception:
+            pass
+        # 尝试去除多余的换行、空格
+        try:
+            return json.loads(blob.strip())
+        except Exception:
+            pass
+        return None
 
     # ---------- 1) 先看 ```json``` 代码块 ----------
     for block in reversed(_CODE_BLOCK_RE.findall(text)):
         obj = _try_load(block)
         if obj is not None:
-            return obj                    # 嵌套无限制
+            return obj
 
-    # ---------- 2) 从后往前定位 {{...}} ----------
-    dec = json.JSONDecoder()
-    i = len(text)                         # 右端游标
+    # ---------- 2) 从后往前定位 {...} ----------
+    # 允许有多余内容，找到最后一个完整的 JSON 对象
     depth = 0
     in_string = False
     escape = False
+    start_idx = None
 
-    # 反向扫描，找到最外层 '{{' 对应的索引 start
+    # 反向扫描，找到最外层 '{' 对应的索引 start
     for i in range(len(text) - 1, -1, -1):
         ch = text[i]
 
         # 维护 in_string / escape 状态，忽略字符串内部的大括号
         if in_string:
-            escape = (ch == '\\\\') and not escape
-            if ch == '"' and not escape:
+            if escape:
+                escape = False
+            elif ch == '\\':
+                escape = True
+            elif ch == '"':
                 in_string = False
             continue
         else:
             if ch == '"':
                 in_string = True
+                escape = False
                 continue
 
-        if ch == '}}':
+        if ch == '}':
+            if depth == 0:
+                end_idx = i
             depth += 1
-        elif ch == '{{':
+        elif ch == '{':
             depth -= 1
-            if depth == 0:                # 找到闭合
-                candidate = text[i:]
+            if depth == 0:
+                start_idx = i
+                candidate = text[start_idx:end_idx+1] if 'end_idx' in locals() else text[start_idx:]
                 obj = _try_load(candidate)
                 if obj is not None:
-                    return obj            # 支持任意嵌套
-                # 否则继续向左找上一层可能的 '{{'
+                    return obj
+                # 否则继续向左找上一层可能的 '{'
+
+    # ---------- 3) 兜底：尝试提取所有 {...} 并解析 ----------
+    # 有些模型输出会有多余内容，尝试提取所有大括号包裹的内容
+    matches = list(re.finditer(r'\{[\s\S]*?\}', text))
+    for m in reversed(matches):
+        candidate = m.group()
+        obj = _try_load(candidate)
+        if obj is not None:
+            return obj
 
     return None
 

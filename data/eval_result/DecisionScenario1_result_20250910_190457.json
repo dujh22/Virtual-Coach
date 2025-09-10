@@ -1,0 +1,261 @@
+[
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 10,
+                "error_reps": 0,
+                "most_frequent_error_type": null
+            },
+            "exercise_name": "引体向上",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 10, 'error_reps': 0, 'most_frequent_error_type': None}\n\n动作名称 (String): 引体向上\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "```json\n{\n  \"exercise_name\": \"引体向上\",\n  \"set_reps\": 10,\n  \"performance_class\": \"C\",\n  \"reason\": \"本组完成10次高质量动作，无错误动作，表现完美。\"\n}\n```",
+        "response_json_0": {
+            "exercise_name": "引体向上",
+            "set_reps": 10,
+            "performance_class": "C",
+            "reason": "本组完成10次高质量动作，无错误动作，表现完美。"
+        },
+        "ground_truth": {
+            "exercise_name": "引体向上",
+            "set_reps": 10,
+            "performance_class": "C",
+            "reason": "100% 高质量完成，无明显错误，表现非常出色。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 9,
+                "error_reps": 1,
+                "most_frequent_error_type": "动作节奏偏快"
+            },
+            "exercise_name": "俯卧撑",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 9, 'error_reps': 1, 'most_frequent_error_type': '动作节奏偏快'}\n\n动作名称 (String): 俯卧撑\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "```json\n{\n  \"exercise_name\": \"俯卧撑\",\n  \"set_reps\": 10,\n  \"performance_class\": \"B\",\n  \"reason\": \"完成了9次高质量动作，成功率为90%，但有1次动作节奏偏快的错误。\"\n}\n```",
+        "response_json_0": {
+            "exercise_name": "俯卧撑",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "完成了9次高质量动作，成功率为90%，但有1次动作节奏偏快的错误。"
+        },
+        "ground_truth": {
+            "exercise_name": "俯卧撑",
+            "set_reps": 10,
+            "performance_class": "C",
+            "reason": "90% 动作完成度，整体表现出色，仅有少量节奏偏快的小瑕疵。"
+        },
+        "is_correct": false,
+        "error_reason": "真实=C, 预测=B"
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 7,
+                "error_reps": 3,
+                "most_frequent_error_type": "核心收紧不足"
+            },
+            "exercise_name": "硬拉",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 7, 'error_reps': 3, 'most_frequent_error_type': '核心收紧不足'}\n\n动作名称 (String): 硬拉\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "```json\n{\n  \"exercise_name\": \"硬拉\",\n  \"set_reps\": 10,\n  \"performance_class\": \"B\",\n  \"reason\": \"本组完成7次高质量动作，成功率为70%，错误率为30%，且有核心收紧不足的错误类型，表现尚可，有小瑕疵。\"\n}\n```",
+        "response_json_0": {
+            "exercise_name": "硬拉",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "本组完成7次高质量动作，成功率为70%，错误率为30%，且有核心收紧不足的错误类型，表现尚可，有小瑕疵。"
+        },
+        "ground_truth": {
+            "exercise_name": "硬拉",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "70% 动作高质量完成，但仍有核心收紧不足问题。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 8,
+                "error_reps": 2,
+                "most_frequent_error_type": "呼吸不均匀"
+            },
+            "exercise_name": "卷腹",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 8, 'error_reps': 2, 'most_frequent_error_type': '呼吸不均匀'}\n\n动作名称 (String): 卷腹\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "```json\n{\n  \"exercise_name\": \"卷腹\",\n  \"set_reps\": 10,\n  \"performance_class\": \"B\",\n  \"reason\": \"本组完成8次高质量动作，成功率为80%，错误率为20%，有呼吸不均匀的错误出现，但可纠正。\"\n}\n```",
+        "response_json_0": {
+            "exercise_name": "卷腹",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "本组完成8次高质量动作，成功率为80%，错误率为20%，有呼吸不均匀的错误出现，但可纠正。"
+        },
+        "ground_truth": {
+            "exercise_name": "卷腹",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "完成度80%，整体表现良好，仅有呼吸节奏的小问题。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 2,
+                "error_reps": 6,
+                "most_frequent_error_type": "肩放置过前"
+            },
+            "exercise_name": "卧推",
+            "set_reps": 8
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 2, 'error_reps': 6, 'most_frequent_error_type': '肩放置过前'}\n\n动作名称 (String): 卧推\n\n动作重复次数设定 (Integer): 8\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"成功率低于25%，且有明显的错误类型肩放置过前。\"\n}",
+        "response_json_0": null,
+        "response_1": "```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"成功率仅为25%，且错误率高达75%，主要错误为肩放置过前。\"\n}\n```",
+        "response_json_1": {
+            "exercise_name": "卧推",
+            "set_reps": 8,
+            "performance_class": "A",
+            "reason": "成功率仅为25%，且错误率高达75%，主要错误为肩放置过前。"
+        },
+        "ground_truth": {
+            "exercise_name": "卧推",
+            "set_reps": 8,
+            "performance_class": "A",
+            "reason": "仅完成2次高质量动作，错误率75%，主要错误为肩放置过前。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 5,
+                "error_reps": 5,
+                "most_frequent_error_type": "下蹲深度不足"
+            },
+            "exercise_name": "深蹲",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 5, 'error_reps': 5, 'most_frequent_error_type': '下蹲深度不足'}\n\n动作名称 (String): 深蹲\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "```json\n{\n  \"exercise_name\": \"深蹲\",\n  \"set_reps\": 10,\n  \"performance_class\": \"B\",\n  \"reason\": \"本组完成5次高质量动作，5次错误动作，成功率为50%，错误率也为50%，存在下蹲深度不足的错误类型，但成功率未低于50%，故判定为表现尚可。\"\n}\n```",
+        "response_json_0": {
+            "exercise_name": "深蹲",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "本组完成5次高质量动作，5次错误动作，成功率为50%，错误率也为50%，存在下蹲深度不足的错误类型，但成功率未低于50%，故判定为表现尚可。"
+        },
+        "ground_truth": {
+            "exercise_name": "深蹲",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "完成度50%，存在一定深度不足问题，但整体仍有部分动作质量。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 6,
+                "error_reps": 4,
+                "most_frequent_error_type": "膝盖内扣"
+            },
+            "exercise_name": "弓步蹲",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 6, 'error_reps': 4, 'most_frequent_error_type': '膝盖内扣'}\n\n动作名称 (String): 弓步蹲\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "```json\n{\n  \"exercise_name\": \"弓步蹲\",\n  \"set_reps\": 10,\n  \"performance_class\": \"B\",\n  \"reason\": \"本组完成6次高质量动作，成功率为60%，错误率为40%，存在可纠正错误类型膝盖内扣。\"\n}\n```",
+        "response_json_0": {
+            "exercise_name": "弓步蹲",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "本组完成6次高质量动作，成功率为60%，错误率为40%，存在可纠正错误类型膝盖内扣。"
+        },
+        "ground_truth": {
+            "exercise_name": "弓步蹲",
+            "set_reps": 10,
+            "performance_class": "B",
+            "reason": "60% 高质量完成，但膝盖内扣需及时纠正。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 1,
+                "error_reps": 9,
+                "most_frequent_error_type": "下背过度弯曲"
+            },
+            "exercise_name": "壶铃摆动",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 1, 'error_reps': 9, 'most_frequent_error_type': '下背过度弯曲'}\n\n动作名称 (String): 壶铃摆动\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "```json\n{\n  \"exercise_name\": \"壶铃摆动\",\n  \"set_reps\": 10,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组成功完成1次高质量动作，错误率为90%，存在明显错误模式：下背过度弯曲。\"\n}\n```",
+        "response_json_0": {
+            "exercise_name": "壶铃摆动",
+            "set_reps": 10,
+            "performance_class": "A",
+            "reason": "本组成功完成1次高质量动作，错误率为90%，存在明显错误模式：下背过度弯曲。"
+        },
+        "ground_truth": {
+            "exercise_name": "壶铃摆动",
+            "set_reps": 10,
+            "performance_class": "A",
+            "reason": "错误率高达90%，主要错误为下背过度弯曲，表现极差。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 3,
+                "error_reps": 7,
+                "most_frequent_error_type": "背部塌陷"
+            },
+            "exercise_name": "平板支撑提膝",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 3, 'error_reps': 7, 'most_frequent_error_type': '背部塌陷'}\n\n动作名称 (String): 平板支撑提膝\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "{\n  \"exercise_name\": \"平板支撑提膝\",\n  \"set_reps\": 10,\n  \"performance_class\": \"A\",\n  \"reason\": \"成功率仅为30%，且有背部塌陷的错误模式。\"\n}",
+        "response_json_0": null,
+        "response_1": "```json\n{\n  \"exercise_name\": \"平板支撑提膝\",\n  \"set_reps\": 10,\n  \"performance_class\": \"A\",\n  \"reason\": \"成功率仅为30%，且错误率高达70%，存在背部塌陷的错误模式。\"\n}\n```",
+        "response_json_1": {
+            "exercise_name": "平板支撑提膝",
+            "set_reps": 10,
+            "performance_class": "A",
+            "reason": "成功率仅为30%，且错误率高达70%，存在背部塌陷的错误模式。"
+        },
+        "ground_truth": {
+            "exercise_name": "平板支撑提膝",
+            "set_reps": 10,
+            "performance_class": "A",
+            "reason": "高质量比例仅30%，错误率过高，典型错误为背部塌陷。"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "training_performance": {
+                "high_quality_reps": 4,
+                "error_reps": 6,
+                "most_frequent_error_type": "肘部外展过大"
+            },
+            "exercise_name": "肩推",
+            "set_reps": 10
+        },
+        "prompt": "\n# 角色设定\n\n你是一名专业健身教练助手，负责根据学员上一组训练的数据来评估训练表现，并给出清晰的分类（A/B/C）。\n\n# 输入\n\n系统会提供三类输入信息：\n\n训练表现数据 (JSON): {'high_quality_reps': 4, 'error_reps': 6, 'most_frequent_error_type': '肘部外展过大'}\n\n动作名称 (String): 肩推\n\n动作重复次数设定 (Integer): 10\n\n\n# 处理逻辑（范式）\n\n请严格按照以下步骤思考和分类：\n\n# 计算比例指标\n\n成功率 = high_quality_reps ÷ 设定 reps\n错误率 = error_reps ÷ 设定 reps\n\n# 判断是否存在错误类型\n\n如果 most_frequent_error_type ≠ null，则说明有具体错误模式。\n\n# 表现分类规则\n\nClass A（表现不佳或有明显错误）：\n\n成功率 < 50%，或者错误率高（≥50%），且存在典型错误类型。\n\nClass B（表现尚可，有小瑕疵）：\n\n成功率在 50%～85%之间，错误率中等，或出现少量可纠正错误。\n\nClass C（表现出色，基本无可挑剔）：\n\n成功率 ≥ 85%，且 error_reps 接近 0，基本无错误类型。\n\n\n# 输出\n\n输出时请遵循以下格式：\n```json\n{\n  \"exercise_name\": \"<动作名称>\",\n  \"set_reps\": <动作设定次数>,\n  \"performance_class\": \"A | B | C\",\n  \"reason\": \"<简短解释，说明分类依据>\"\n}\n```\n示例：\n```json\n{\n  \"exercise_name\": \"卧推\",\n  \"set_reps\": 8,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组仅完成2次高质量动作，错误率超过70%，主要错误为肩放置过前。\"\n}\n```\n\n请给出直接输出，不需要写代码。\n",
+        "response_0": "{\n  \"exercise_name\": \"肩推\",\n  \"set_reps\": 10,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组完成4次高质量动作，成功率仅为40%，错误率高达60%，且有典型错误类型肘部外展过大。\"\n}",
+        "response_json_0": null,
+        "response_1": "{\n  \"exercise_name\": \"肩推\",\n  \"set_reps\": 10,\n  \"performance_class\": \"A\",\n  \"reason\": \"成功率仅为40%，且有肘部外展过大的典型错误。\"\n}",
+        "response_json_1": null,
+        "response_2": "{\n  \"exercise_name\": \"肩推\",\n  \"set_reps\": 10,\n  \"performance_class\": \"A\",\n  \"reason\": \"本组完成4次高质量动作，成功率仅为40%，且有6次错误，错误率高达60%，主要错误为肘部外展过大。\"\n}",
+        "response_json_2": null,
+        "is_correct": false,
+        "error_reason": "无法获取有效响应"
+    }
+]
