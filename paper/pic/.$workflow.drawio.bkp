@@ -57,7 +57,7 @@
         <mxCell id="Ne6ipJFBI84Cd9fq50re-9" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;教练决策行为&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=31;fillColor=light-dark(#75b1f2, #512d2b);strokeColor=none;fontFamily=Comic Sans MS;" vertex="1" parent="1">
           <mxGeometry x="160" y="270" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Ne6ipJFBI84Cd9fq50re-10" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;用户响应行为&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=31;fillColor=light-dark(#e23a35, #512d2b);strokeColor=none;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+        <mxCell id="Ne6ipJFBI84Cd9fq50re-10" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;用户决策行为&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=31;fillColor=light-dark(#e23a35, #512d2b);strokeColor=none;fontFamily=Comic Sans MS;" vertex="1" parent="1">
           <mxGeometry x="340" y="270" width="150" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Ne6ipJFBI84Cd9fq50re-11" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.obtuse_triangle;dx=0.12;rotation=-180;flipV=0;flipH=1;strokeColor=none;gradientColor=light-dark(#75b1f2, #ededed);gradientDirection=north;fontFamily=Comic Sans MS;" vertex="1" parent="1">
