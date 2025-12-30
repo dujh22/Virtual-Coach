@@ -83,4 +83,5 @@
 ## 3.使用方式
 
 1. 下载最新文件到workflow文件夹下，包括nodes、promtp文件夹，具体从：https://codeup.aliyun.com/68ac0c4d9eda9d4e3ee4f1ef/aifitgo/LogicBackend/tree/master
-2.
+2. 修改代码中对LLM的调用方式，当前采用的是llm_api.py文件，可以使用类似实现的llm相关调用函数进行相关功能替代
+3. 运行main.py
