@@ -51,11 +51,11 @@ no_data：无数据，用于异常情况
 
 ### 4.已有LLM提示词模版
 
-user_question.md: 用户动作问题反馈
-user_adjust.md: 用户调整指导
-intergroup_decision1.md: 组间决策1（等级判断）
-intergroup_decision2.md: 组间决策2（沟通判断）
-intergroup_decision3.md: 组间决策3（调整判断）
-intergroup_summary.md: 组间总结
-pic_summary.md: 图片总结
-adjust_reason_text.md: 调整原因说明
+[user_question.md](../../prompt/ws/user_question.md): 用户动作问题反馈
+[user_adjust.md](../../prompt/ws/user_adjust.md): 用户调整指导
+[intergroup_decision1.md](../../prompt/ws/intergroup_decision1.md): 组间决策1（等级判断）
+[intergroup_decision2.md](../../prompt/ws/intergroup_decision2.md): 组间决策2（沟通判断）
+[intergroup_decision3.md](../../prompt/ws/intergroup_decision3.md): 组间决策3（调整判断）
+[intergroup_summary.md](../../prompt/ws/intergroup_summary.md): 组间总结
+[pic_summary.md](../../prompt/ws/pic_summary.md): 图片总结
+[adjust_reason_text.md](../../prompt/ws/adjust_reason_text.md): 调整原因说明
