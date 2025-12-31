@@ -1,3 +1,5 @@
+max_iteration = 3
+
 default_user_standardized_output = "./example/wf_setup_s03_inter.json"
 
 default_knewledge = {

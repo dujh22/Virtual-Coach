@@ -3,12 +3,14 @@ import uuid
 
 from .logger import JsonlLogger
 from .utils import _read_json, _write_json
+from .retruever import Retriever
 from .default_config import default_user_standardized_output, default_knewledge
 
 def cli_main():
     # 初始化
     run_id = str(uuid.uuid4())
     logger = JsonlLogger(f"workflow_log_{run_id}.jsonl")
+    retriever = Retriever()
 
     # 1. 获得用户输入的需求和标准化输出例子
     user_input = input("请输入你的需求: ")
