@@ -75,7 +75,7 @@ Virtual-Coach/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/Virtual-Coach.git
+git clone https://github.com/dujh22/Virtual-Coach.git
 cd Virtual-Coach
 ```
 
@@ -201,10 +201,10 @@ If you use Virtual Coach in your research, please cite our code repository or pa
 
 ```bibtex
 @software{virtual_coach_2025,
-  author = {Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  author = {Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
   title = {Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
   year = {2025},
-  url = {https://github.com/your-username/Virtual-Coach},
+  url = {https://github.com/dujh22/Virtual-Coach},
   version = {1.0.0}
 }
 ```
@@ -214,15 +214,15 @@ If you use Virtual Coach in your research, please cite our code repository or pa
 ```bibtex
 @misc{du2025edmit,
   title={EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring},
-  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
   year={2025},
-  note={Submitted to CHI 2025. Code available at: https://github.com/your-username/Virtual-Coach}
+  note={Code available at: https://github.com/dujh22/Virtual-Coach}
 }
 ```
 
 ### APA Format
 
-Du, J., Xing, M., Zhou, Z., Zhang, R., Liu, Z., & Jiang, Z. (2025). EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring. *Submitted to CHI 2025*. Code available at: https://github.com/your-username/Virtual-Coach
+Du, J., Xing, M., Zhou, Z., Zhang, R., & Jiang, Z. (2025). EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring. *Submitted to CHI 2025*. Code available at: https://github.com/dujh22/Virtual-Coach
 
 ### Software/Code Citation (Recommended)
 
@@ -231,9 +231,9 @@ If you are citing the code implementation, we recommend using the following form
 ```bibtex
 @software{virtual_coach,
   title={Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
-  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
   year={2025},
-  url={https://github.com/your-username/Virtual-Coach},
+  url={https://github.com/dujh22/Virtual-Coach},
   version={1.0.0}
 }
 ```
@@ -272,8 +272,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact Us
 
-- Project Homepage: [GitHub Repository](https://github.com/your-username/Virtual-Coach)
-- Issue Tracker: [Issues](https://github.com/your-username/Virtual-Coach/issues)
+- Project Homepage: [GitHub Repository](https://github.com/dujh22/Virtual-Coach)
+- Issue Tracker: [Issues](https://github.com/dujh22/Virtual-Coach/issues)
 - Email: dujh22@mails.tsinghua.edu.cn
 
 ## 🙏 Acknowledgments

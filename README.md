@@ -197,16 +197,16 @@ agent = MetadataAgent(metadata_name="示例元数据", model_name="glm-4-air")
 
 ## 📖 引用信息
 
-如果您在研究中使用了 Virtual Coach 项目，请引用我们的代码仓库或论文（论文已提交至CHI 2025，待发表）：
+如果您在研究中使用了 Virtual Coach 项目，请引用我们的代码仓库或论文：
 
 ### BibTeX 格式（代码仓库引用）
 
 ```bibtex
 @software{virtual_coach_2025,
-  author = {Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  author = {Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
   title = {Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
   year = {2025},
-  url = {https://github.com/your-username/Virtual-Coach},
+  url = {https://github.com/dujh22/Virtual-Coach},
   version = {1.0.0}
 }
 ```
@@ -216,15 +216,15 @@ agent = MetadataAgent(metadata_name="示例元数据", model_name="glm-4-air")
 ```bibtex
 @misc{du2025edmit,
   title={EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring},
-  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
   year={2025},
-  note={Submitted to CHI 2025. Code available at: https://github.com/your-username/Virtual-Coach}
+  note={Code available at: https://github.com/dujh22/Virtual-Coach}
 }
 ```
 
 ### APA 格式
 
-Du, J., Xing, M., Zhou, Z., Zhang, R., Liu, Z., & Jiang, Z. (2025). EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring. *Submitted to CHI 2025*. Code available at: https://github.com/your-username/Virtual-Coach
+Du, J., Xing, M., Zhou, Z., Zhang, R., & Jiang, Z. (2025). EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring. *Submitted to CHI 2025*. Code available at: https://github.com/dujh22/Virtual-Coach
 
 ### 软件/代码引用（推荐）
 
@@ -233,9 +233,9 @@ Du, J., Xing, M., Zhou, Z., Zhang, R., Liu, Z., & Jiang, Z. (2025). EDMIT: An En
 ```bibtex
 @software{virtual_coach,
   title={Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
-  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
   year={2025},
-  url={https://github.com/your-username/Virtual-Coach},
+  url={https://github.com/dujh22/Virtual-Coach},
   version={1.0.0}
 }
 ```
