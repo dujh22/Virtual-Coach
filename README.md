@@ -195,6 +195,51 @@ agent = MetadataAgent(metadata_name="示例元数据", model_name="glm-4-air")
 - 开发了基于自然语言的工作流自动生成系统
 - 实现了元数据智能体用于结构化数据生成
 
+## 📖 引用信息
+
+如果您在研究中使用了 Virtual Coach 项目，请引用我们的代码仓库或论文（论文已提交至CHI 2025，待发表）：
+
+### BibTeX 格式（代码仓库引用）
+
+```bibtex
+@software{virtual_coach_2025,
+  author = {Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  title = {Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
+  year = {2025},
+  url = {https://github.com/your-username/Virtual-Coach},
+  version = {1.0.0}
+}
+```
+
+### BibTeX 格式（论文引用，待发表）
+
+```bibtex
+@misc{du2025edmit,
+  title={EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring},
+  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  year={2025},
+  note={Submitted to CHI 2025. Code available at: https://github.com/your-username/Virtual-Coach}
+}
+```
+
+### APA 格式
+
+Du, J., Xing, M., Zhou, Z., Zhang, R., Liu, Z., & Jiang, Z. (2025). EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring. *Submitted to CHI 2025*. Code available at: https://github.com/your-username/Virtual-Coach
+
+### 软件/代码引用（推荐）
+
+如果您引用的是代码实现，推荐使用以下格式：
+
+```bibtex
+@software{virtual_coach,
+  title={Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
+  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zhongshi Liu and Zexun Jiang},
+  year={2025},
+  url={https://github.com/your-username/Virtual-Coach},
+  version={1.0.0}
+}
+```
+
 ## 📝 更新日志
 
 ### v1.0.0
