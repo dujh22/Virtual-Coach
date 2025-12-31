@@ -80,7 +80,7 @@
 
 #### 2.3.2 添加新节点
 
-详细定义参见[./define/node/add.md](./define/node/add.md)
+详细定义参见[./define/action/add.md](./define/action/add.md)
 
 ## 3.使用方式
 

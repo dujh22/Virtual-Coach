@@ -1,0 +1,21 @@
+{
+  "generated_workflow": {
+    "start_node": "receive_00",
+    "listen_at_start": true,
+    "input_parameters": {},
+    "nodes": [
+      {
+        "id": 0,
+        "node_type": "receive_message",
+        "node_name": "receive_00",
+        "key_node": true,
+        "msg_queue": true,
+        "input_map": {},
+        "choice_map": {
+          "default": "finish"
+        },
+        "attrs": {}
+      }
+    ]
+  }
+}
