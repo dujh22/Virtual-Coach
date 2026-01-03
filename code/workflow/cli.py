@@ -47,8 +47,10 @@ def cli_main():
         if plan.get("need_more_knowledge") is False:
             break
 
-    if plan and "workflow_draft" in plan:
-        _write_json(plan["workflow_draft"], "workflow.json")
+    print(plan.keys())
+    if plan and "workflow_draft" in plan.keys():
+        _write_json(plan.get("workflow_draft"), "workflow.json")
+        print("piog")
         logger.log("工作流保存结果", {"工作流": plan["workflow_draft"]})
 
 if __name__ == "__main__":

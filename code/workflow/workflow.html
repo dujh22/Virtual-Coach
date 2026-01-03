@@ -166,6 +166,49 @@
     .log-area::-webkit-scrollbar{width:10px;}
     .log-area::-webkit-scrollbar-thumb{background: rgba(255,255,255,.14); border-radius: 999px;}
     .log-area::-webkit-scrollbar-track{background: rgba(0,0,0,.10);}
+
+    /* 浮动状态块 */
+    .status-float{
+      position:fixed;
+      top:20px;
+      right:20px;
+      padding:14px 20px;
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.08));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      font-size:14px;
+      color:var(--text);
+      z-index:1000;
+      display:none;
+      min-width:200px;
+      max-width:400px;
+    }
+    .status-float.show{
+      display:block;
+    }
+    .status-float .status-text{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .status-float .status-dots{
+      display:inline-block;
+      min-width:24px;
+      text-align:left;
+    }
+    .status-float.completed{
+      border-color: var(--accent);
+      background: linear-gradient(180deg, rgba(45,212,191,.15), rgba(45,212,191,.08));
+    }
+    .status-float .location{
+      margin-top:6px;
+      font-size:12px;
+      color:var(--muted);
+      word-break:break-all;
+    }
   </style>
 </head>
 
@@ -179,6 +222,16 @@
     <main class="log-area">
       <div id="logGrid" class="log-grid"></div>
     </main>
+
+    <!-- 浮动状态块 -->
+    <div id="statusFloat" class="status-float">
+      <div class="status-text">
+        <span id="statusMessage">正在推理生成中</span>
+        <span id="statusDots" class="status-dots">...</span>
+      </div>
+      <div id="statusTimer" class="location" style="display:none;margin-top:4px;"></div>
+      <div id="statusLocation" class="location" style="display:none;"></div>
+    </div>
 
     <!-- 输入放到页面最下面 -->
     <div class="input-bar">
@@ -201,6 +254,123 @@
     const startBtn = document.getElementById('startBtn');
     const demandEl = document.getElementById('demand');
     const examplePathEl = document.getElementById('examplePath');
+    const statusFloat = document.getElementById('statusFloat');
+    const statusMessage = document.getElementById('statusMessage');
+    const statusDots = document.getElementById('statusDots');
+    const statusTimer = document.getElementById('statusTimer');
+    const statusLocation = document.getElementById('statusLocation');
+
+    // 状态管理
+    let statusInterval = null;
+    let timerInterval = null;
+    let startTime = null;
+    let metaLogPath = null;
+    let isCompleted = false;
+
+    // 检查 payload 中是否有 need_more_knowledge 字段且为 false
+    function checkNeedMoreKnowledge(payload) {
+      if (!payload || typeof payload !== 'object') return false;
+      
+      // 直接检查 payload.need_more_knowledge
+      if ('need_more_knowledge' in payload && payload.need_more_knowledge === false) {
+        return true;
+      }
+      
+      // 检查 payload 中嵌套的对象（如解析结果）
+      for (const key in payload) {
+        const value = payload[key];
+        if (value && typeof value === 'object') {
+          if ('need_more_knowledge' in value && value.need_more_knowledge === false) {
+            return true;
+          }
+        }
+      }
+      
+      return false;
+    }
+
+    // 显示推理中状态
+    function showGeneratingStatus() {
+      isCompleted = false;
+      statusFloat.classList.remove('completed');
+      statusMessage.textContent = '正在推理生成中';
+      statusLocation.style.display = 'none';
+      statusFloat.classList.add('show');
+      
+      // 记录开始时间
+      startTime = Date.now();
+      
+      // 显示计时器
+      statusTimer.style.display = 'block';
+      updateTimer();
+      
+      // 动态显示1～6个点
+      let dotCount = 1;
+      statusInterval = setInterval(() => {
+        statusDots.textContent = '.'.repeat(dotCount);
+        dotCount = (dotCount % 6) + 1;
+      }, 300);
+      
+      // 每秒更新计时器
+      timerInterval = setInterval(updateTimer, 1000);
+    }
+    
+    // 更新计时器显示
+    function updateTimer() {
+      if (!startTime) return;
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      statusTimer.textContent = `已用时: ${elapsed}秒`;
+    }
+
+    // 显示完成状态
+    function showCompletedStatus() {
+      isCompleted = true;
+      if (statusInterval) {
+        clearInterval(statusInterval);
+        statusInterval = null;
+      }
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      
+      // 显示最终用时
+      if (startTime) {
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        statusTimer.textContent = `总用时: ${elapsed}秒`;
+        statusTimer.style.display = 'block';
+      }
+      
+      statusFloat.classList.add('completed');
+      statusMessage.textContent = '生成完成';
+      statusDots.textContent = '';
+      
+      if (metaLogPath) {
+        // statusLocation.textContent = `位置：${metaLogPath}`;
+        statusLocation.textContent = `位置：workflow.json 或 ${metaLogPath} 最后一个JSON的workflow_draft字段`;
+        statusLocation.style.display = 'block';
+      } else {
+        statusLocation.style.display = 'none';
+      }
+      
+      startTime = null;
+    }
+
+    // 隐藏状态块
+    function hideStatus() {
+      if (statusInterval) {
+        clearInterval(statusInterval);
+        statusInterval = null;
+      }
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      statusFloat.classList.remove('show', 'completed');
+      statusTimer.style.display = 'none';
+      statusLocation.style.display = 'none';
+      startTime = null;
+    }
 
     function safeJsonStringify(obj) {
       try { return JSON.stringify(obj, null, 2); }
@@ -333,6 +503,8 @@
       clearLogs();
       runIdEl.textContent = '-';
       logPathEl.textContent = '-';
+      metaLogPath = null;
+      hideStatus();
 
       const resp = await fetch('http://localhost:8000/api/start', {
         method: 'POST',
@@ -355,7 +527,13 @@
       const data = await resp.json();
       const run_id = data.run_id;
       runIdEl.textContent = run_id || '-';
-      logPathEl.textContent = data.log_path || data.log_jsonl_path || '-';
+      const logPath = data.log_path || data.log_jsonl_path || '-';
+      logPathEl.textContent = logPath;
+      
+      // 保存 log_path 以备后用
+      if (logPath !== '-') {
+        metaLogPath = logPath;
+      }
 
       if (!run_id) {
         renderLogItem({
@@ -368,6 +546,8 @@
         return;
       }
 
+      // 开始显示推理状态
+      showGeneratingStatus();
       streamLogs(run_id);
     }
 
@@ -382,6 +562,11 @@
       es.addEventListener("meta", (ev) => {
         try {
           const meta = JSON.parse(ev.data);
+          // 保存 meta 中的 log_path
+          if (meta.log_path) {
+            metaLogPath = meta.log_path;
+          }
+          
           // 优先使用 meta 中的 ts 字段（服务器时间），如果没有则使用客户端时间
           const ts = meta.ts || new Date().toISOString().replace('T', ' ').replace(/\.\d+Z$/, '');
           renderLogItem({
@@ -406,6 +591,11 @@
         try {
           const item = JSON.parse(ev.data);
           renderLogItem(item);
+          
+          // 检查是否完成（need_more_knowledge 为 false）
+          if (!isCompleted && checkNeedMoreKnowledge(item.payload)) {
+            showCompletedStatus();
+          }
         } catch (e) {
           renderLogItem({
             ts: new Date().toISOString(),
