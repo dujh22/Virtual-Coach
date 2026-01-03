@@ -1,4 +1,4 @@
-max_iteration = 3
+max_iteration = 10
 
 default_user_standardized_output = "./example/wf_setup_s03_inter.json"
 

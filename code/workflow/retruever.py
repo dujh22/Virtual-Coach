@@ -14,6 +14,18 @@ class Retriever:
         return list(self.knewledge[first_level_key].keys()) 
 
     def get_knowledge_content(self, first_level_key: str, second_level_key: str) -> str:
+        first_level_keys = self.get_knowledge_first_level_key()
+        if first_level_key not in first_level_keys:
+            return f"【{first_level_key}】不存在, 存在的一级键有: {first_level_keys}"
+        
+        second_level_keys = self.get_knowledge_second_level_key(first_level_key)
+        if second_level_key not in second_level_keys:
+            second_level_key_all = []
+            for second_level_key_item in second_level_keys:
+                temp = f"【{first_level_key}.{second_level_key_item}】"
+                second_level_key_all.append(temp)
+            return f"【{first_level_key}.{second_level_key}】不存在,存在的二级键有: {second_level_key_all}"
+
         file_path = self.knewledge[first_level_key][second_level_key]
         with open(file_path, "r", encoding="utf-8") as f:
             return f.read()

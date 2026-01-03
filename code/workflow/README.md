@@ -84,10 +84,23 @@
 
 ## 3.使用方式
 
+命令行启动后端：
+
+```shell
+uvicorn server:app --reload --port 8000
+```
+
+直接点击启动前端：
+
+```shell
+workflow.html
+```
+
+## 4. 维护防护
+
 1. 下载最新文件到workflow文件夹下，包括nodes、promtp文件夹，具体从：https://codeup.aliyun.com/68ac0c4d9eda9d4e3ee4f1ef/aifitgo/LogicBackend/tree/master
 2. 修改代码中对LLM的调用方式，当前采用的是llm_api.py文件，可以使用类似实现的llm相关调用函数进行相关功能替代
-3. 运行main.py
 
-# 4. 相关文档
+## 5. 相关文档
 
 * [使用 prompt 生成工作流配置文件](https://zhipu-ai.feishu.cn/docx/JVxjdT2NtoncfaxzBoQcfss5nVf?from=from_copylink)
