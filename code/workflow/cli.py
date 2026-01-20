@@ -49,7 +49,7 @@ def cli_main():
 
     print(plan.keys())
     if plan and "workflow_draft" in plan.keys():
-        _write_json(plan.get("workflow_draft"), "workflow.json")
+        _write_json("workflow.json", plan.get("workflow_draft"))
         print("piog")
         logger.log("工作流保存结果", {"工作流": plan["workflow_draft"]})
 

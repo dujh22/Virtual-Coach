@@ -2,7 +2,7 @@ import asyncio
 import json
 import os
 import re
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse
@@ -25,7 +25,7 @@ RUNS: Dict[str, Dict[str, Any]] = {}  # run_id -> {proc, log_path}
 
 class StartReq(BaseModel):
     demand: str
-    example_path: str | None = ""
+    example_path: Optional[str] = ""
 
 
 async def _read_kv_from_stdout(proc: asyncio.subprocess.Process, key: str, timeout_s: float = 5.0) -> str:
