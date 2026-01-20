@@ -268,7 +268,7 @@
     let isCompleted = false;
 
     // 检查 payload 中是否有 need_more_knowledge 字段且为 false
-    function checkNeedMoreKnowledge(payload) {
+    function checkNoMoreKnowledge(payload) {
       if (!payload || typeof payload !== 'object') return false;
       
       // 直接检查 payload.need_more_knowledge
@@ -286,6 +286,15 @@
         }
       }
       
+      return false;
+    }
+
+    // 检查 payload 中是否有 own_test_input 字段且为 true
+    function checkOwnTestInput(payload) {
+      if (!payload || typeof payload !== 'object') return false;
+      if ('own_test_input' in payload && payload.own_test_input === true) {
+        return true;
+      }
       return false;
     }
 
@@ -347,7 +356,7 @@
       
       if (metaLogPath) {
         // statusLocation.textContent = `位置：${metaLogPath}`;
-        statusLocation.textContent = `位置：workflow.json 或 ${metaLogPath} 最后一个JSON的workflow_draft字段`;
+        statusLocation.textContent = `完整工作流：workflow.json\n测试用工作流：workflow_test_input.json\n测试用输入：test_input.json\n完整日志：${metaLogPath}`;
         statusLocation.style.display = 'block';
       } else {
         statusLocation.style.display = 'none';
@@ -592,8 +601,8 @@
           const item = JSON.parse(ev.data);
           renderLogItem(item);
           
-          // 检查是否完成（need_more_knowledge 为 false）
-          if (!isCompleted && checkNeedMoreKnowledge(item.payload)) {
+          // 检查是否完成（ own_test_input 为 true）
+          if (!isCompleted && checkOwnTestInput(item.payload)) { // && checkNoMoreKnowledge(item.payload) 检查need_more_knowledge 为 false 暂时停用
             showCompletedStatus();
           }
         } catch (e) {

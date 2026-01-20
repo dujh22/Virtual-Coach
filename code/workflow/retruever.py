@@ -32,6 +32,9 @@ class Retriever:
     
     def get_base_knowledge_content(self) -> str:
         return self.get_knowledge_content("base", "base")
+    
+    def get_test_input_knowledge_content(self) -> str:
+        return self.get_knowledge_content("base", "test_input")
 
 if __name__ == "__main__":
     retriever = Retriever()

@@ -5,6 +5,7 @@ default_user_standardized_output = "./example/wf_setup_s03_inter.json"
 default_knewledge = {
     "base": {
         "base": "./define/base/base.md",
+        "test_input": "./define/base/test_input.md",
     },
     "workflow": {
         "base": "./define/workflow/base.md",
