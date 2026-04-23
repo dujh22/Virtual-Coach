@@ -47,14 +47,14 @@ Virtual-Coach/
 
 ### 安装步骤
 
-1. **克隆项目**
+#### **1. 克隆项目**
 
 ```bash
-git clone https://github.com/your-username/Virtual-Coach.git
+git clone https://github.com/dujh22/Virtual-Coach.git
 cd Virtual-Coach
 ```
 
-2. **安装依赖**
+#### **2. 安装依赖**
 
 ```bash
 # 推荐使用conda创建虚拟环境
@@ -68,9 +68,9 @@ pip install -e .
 pip install -r requirements.txt
 ```
 
-3. **配置API密钥**
+#### **3. 配置API密钥**
 
-参照 `code/models/api_keys_template.py` 创建 `code/models/api_keys.py` 文件：
+参照 `code/models/api_keys_template.py` 创建 `code/models/api_keys.py` 文件，只需要提供对应模型的key即可，其他可以留空：
 
 ```python
 OPENAI_URL="API调用请求的网址"
@@ -78,45 +78,14 @@ OPENAI_API_KEY="API_KEY"
 OPENAI_MODEL="具体请求的模型"
 ```
 
-4. **配置模型**
-
-- 将模型名称添加到 `code/agent/config/model_all.txt`
-- 如需启用模型，同时添加到 `code/agent/config/model.txt`
-- 使用 `code/models/utils/normalize_string.py` 获取模型的标准字符串名称
-- 在 `code/models/` 目录下创建对应的模型接口文件（参考现有实现）
-
-5. **运行项目**
+#### 4. 构造LLM调用基本文件
 
 ```bash
-# 运行主程序
-python code/main.py
-
-# 或运行工作流模块
-python code/workflow/main.py
+cd ./code/utils 
+python auto_generate_llm_call.py
 ```
 
 ## 📖 使用说明
-
-### 元数据智能体（MetadataAgent）
-
-MetadataAgent 是系统的核心组件，用于生成和管理元数据。主要功能包括：
-
-- **元数据生成**: 基于自然语言描述生成结构化的元数据
-- **变量管理**: 支持变量的生成、验证和管理
-- **案例生成**: 基于元数据生成测试案例
-- **多语言支持**: 支持中英文元数据转换
-
-使用示例：
-
-```python
-from code.agent.MetadataAgent import MetadataAgent
-
-# 初始化元数据智能体
-agent = MetadataAgent(metadata_name="示例元数据", model_name="glm-4-air")
-
-# 生成元数据
-# ... 使用agent的各种方法
-```
 
 ### 工作流生成系统
 
@@ -139,123 +108,3 @@ agent = MetadataAgent(metadata_name="示例元数据", model_name="glm-4-air")
 - `eval_prompt_DecisionScenario4.py` - 决策场景4评估
 
 评估数据位于 `data/eval/` 目录，评估结果保存在 `data/eval_result/` 目录。
-
-## 🔧 开发指南
-
-### 添加新的模型支持
-
-1. 在 `code/models/` 目录下创建新的模型接口文件
-2. 实现 `llm_response` 方法（参考现有实现）
-3. 在 `code/__init__.py` 中导出新模型接口
-4. 更新 `code/agent/config/model_all.txt` 和 `model.txt`
-
-### 代码规范
-
-- 使用 Python 3.8+ 语法
-- 遵循 PEP 8 代码风格
-- 添加必要的类型注解
-- 编写清晰的文档字符串
-
-## 📚 相关研究
-
-本项目相关研究论文已提交至CHI 2025会议，详细内容请参考 `paper/CHI2025/` 目录。
-
-### 主要贡献
-
-- 提出了基于LLM的虚拟教练框架
-- 设计了交互式课程生成算法
-- 实现了个性化学习路径推荐
-- 验证了系统在教育领域的有效性
-- 开发了基于自然语言的工作流自动生成系统
-- 实现了元数据智能体用于结构化数据生成
-
-## 📖 引用信息
-
-如果您在研究中使用了 Virtual Coach 项目，请引用我们的代码仓库或论文：
-
-### BibTeX 格式（代码仓库引用）
-
-```bibtex
-@software{virtual_coach_2025,
-  author = {Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
-  title = {Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
-  year = {2025},
-  url = {https://github.com/dujh22/Virtual-Coach},
-  version = {1.0.0}
-}
-```
-
-### BibTeX 格式（论文引用，待发表）
-
-```bibtex
-@misc{du2025edmit,
-  title={EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring},
-  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
-  year={2025},
-  note={Code available at: https://github.com/dujh22/Virtual-Coach}
-}
-```
-
-### APA 格式
-
-Du, J., Xing, M., Zhou, Z., Zhang, R., & Jiang, Z. (2025). EDMIT: An End-to-End Agentic Framework for Enhanced Decision-Making in Interactive Motion Tutoring. *Submitted to CHI 2025*. Code available at: https://github.com/dujh22/Virtual-Coach
-
-### 软件/代码引用（推荐）
-
-如果您引用的是代码实现，推荐使用以下格式：
-
-```bibtex
-@software{virtual_coach,
-  title={Virtual Coach: LLM-based Virtual Coach Interactive Course Generation System},
-  author={Jinhua Du and Mufeng Xing and Ziheng Zhou and Ruilin Zhang and Zexun Jiang},
-  year={2025},
-  url={https://github.com/dujh22/Virtual-Coach},
-  version={1.0.0}
-}
-```
-
-## 📝 更新日志
-
-### v1.0.0
-
-- 初始版本发布
-- 实现元数据智能体核心功能
-- 实现工作流生成系统
-- 添加多模型支持
-- 提供评估系统
-
-## 🤝 贡献指南
-
-我们欢迎社区贡献！如果您想为项目做出贡献，请：
-
-1. Fork 本项目
-2. 创建您的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启一个 Pull Request
-
-### 贡献类型
-
-- 🐛 Bug修复
-- ✨ 新功能开发
-- 📝 文档改进
-- 🧪 测试用例添加
-- 🎨 代码优化
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
-
-## 📞 联系我们
-
-- 项目主页: [GitHub Repository](https://github.com/your-username/Virtual-Coach)
-- 问题反馈: [Issues](https://github.com/your-username/Virtual-Coach/issues)
-- 邮箱: dujh22@mails.tsinghua.edu.cn
-
-## 🙏 致谢
-
-感谢所有为这个项目做出贡献的研究人员和开发者。
-
----
-
-⭐ 如果这个项目对您有帮助，请给我们一个星标！
