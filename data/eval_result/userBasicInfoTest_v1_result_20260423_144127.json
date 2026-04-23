@@ -1,0 +1,242 @@
+[
+    {
+        "input": {
+            "user_input": "张伟说他想去北京。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：张伟说他想去北京。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"张伟\", \"gender\": \"male\"}",
+        "response_json_0": {
+            "name": "张伟",
+            "gender": "male"
+        },
+        "time_cost": 36.11324214935303,
+        "ground_truth": {
+            "name": "张伟",
+            "gender": "male"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "李娜说她正在学习。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：李娜说她正在学习。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"李娜\", \"gender\": \"female\"}",
+        "response_json_0": {
+            "name": "李娜",
+            "gender": "female"
+        },
+        "time_cost": 510.62335324287415,
+        "ground_truth": {
+            "name": "李娜",
+            "gender": "female"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "我的朋友叫王强。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：我的朋友叫王强。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"王强\", \"gender\": \"unknown\"}",
+        "response_json_0": {
+            "name": "王强",
+            "gender": "unknown"
+        },
+        "time_cost": 8.10896897315979,
+        "ground_truth": {
+            "name": "王强",
+            "gender": "unknown"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "他今天没来上班。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：他今天没来上班。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\n  \"name\": null,\n  \"gender\": \"male\"\n}",
+        "response_json_0": {
+            "name": null,
+            "gender": "male"
+        },
+        "time_cost": 25.074295043945312,
+        "ground_truth": {
+            "name": null,
+            "gender": "male"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "她昨天去了超市。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：她昨天去了超市。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\n\"name\": null,\n\"gender\": \"female\"\n}",
+        "response_json_0": {
+            "name": null,
+            "gender": "female"
+        },
+        "time_cost": 7.269484996795654,
+        "ground_truth": {
+            "name": null,
+            "gender": "female"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "如果你看到Sarah，请告诉她我来了。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：如果你看到Sarah，请告诉她我来了。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"Sarah\", \"gender\": \"female\"}",
+        "response_json_0": {
+            "name": "Sarah",
+            "gender": "female"
+        },
+        "time_cost": 57.053478956222534,
+        "ground_truth": {
+            "name": "Sarah",
+            "gender": "female"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "请帮我联系John，他很有钱。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：请帮我联系John，他很有钱。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"John\", \"gender\": \"male\"}",
+        "response_json_0": {
+            "name": "John",
+            "gender": "male"
+        },
+        "time_cost": 19.045438051223755,
+        "ground_truth": {
+            "name": "John",
+            "gender": "male"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "今天天气不错，小明来找我玩。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：今天天气不错，小明来找我玩。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"小明\", \"gender\": \"unknown\"}",
+        "response_json_0": {
+            "name": "小明",
+            "gender": "unknown"
+        },
+        "time_cost": 36.778220891952515,
+        "ground_truth": {
+            "name": "小明",
+            "gender": "unknown"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "请问这个包裹是给谁的？"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：请问这个包裹是给谁的？\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": null, \"gender\": \"unknown\"}",
+        "response_json_0": {
+            "name": null,
+            "gender": "unknown"
+        },
+        "time_cost": 5.887341022491455,
+        "ground_truth": {
+            "name": null,
+            "gender": "unknown"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "陈晨说她很喜欢唱歌。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：陈晨说她很喜欢唱歌。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\n    \"name\": \"陈晨\",\n    \"gender\": \"female\"\n}",
+        "response_json_0": {
+            "name": "陈晨",
+            "gender": "female"
+        },
+        "time_cost": 14.23974609375,
+        "ground_truth": {
+            "name": "陈晨",
+            "gender": "female"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "他正在开车回家。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：他正在开车回家。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": null, \"gender\": \"male\"}",
+        "response_json_0": {
+            "name": null,
+            "gender": "male"
+        },
+        "time_cost": 18.066474676132202,
+        "ground_truth": {
+            "name": null,
+            "gender": "male"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "她们正在讨论问题。"
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：她们正在讨论问题。\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\n  \"name\": null,\n  \"gender\": \"female\"\n}",
+        "response_json_0": {
+            "name": null,
+            "gender": "female"
+        },
+        "time_cost": 258.7737898826599,
+        "ground_truth": {
+            "name": null,
+            "gender": "female"
+        },
+        "is_correct": true
+    },
+    {
+        "input": {
+            "user_input": "Tom is here."
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：Tom is here.\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"Tom\", \"gender\": \"unknown\"}",
+        "response_json_0": {
+            "name": "Tom",
+            "gender": "unknown"
+        },
+        "time_cost": 15.169709205627441,
+        "ground_truth": {
+            "name": "Tom",
+            "gender": "male"
+        },
+        "is_correct": false,
+        "error_reason": "gender: 期望=male, 预测=unknown"
+    },
+    {
+        "input": {
+            "user_input": "It is a cat."
+        },
+        "prompt": "# Role\n你是一个专业的信息提取专家，擅长从自然语言文本中精准识别并提取特定实体信息。\n\n# Input\n待处理的用户输入文本：It is a cat.\n\n# Processing Logic\n请严格按照以下规则分析输入文本：\n1. **姓名提取**：\n   - 识别文本中代表人的专有名词。\n   - 优先提取主要称呼、全名或最显著的名称。\n   - 保持原名，不做翻译、删减或修改。\n   - 如果文本中未提及或无法识别姓名，请将 \"name\" 设为 null。\n2. **性别提取**：\n   - 根据代词（如“他”、“她”、“it”）、姓氏特征或明确描述进行判断。\n   - 如果性别明确，输出 \"male\" 或 \"female\"。\n   - 如果性别模糊或未提及，请将 \"gender\" 设为 \"unknown\"。\n\n# Output Format\n请直接输出JSON格式的结果，不要包含任何Markdown标记、解释性文字或代码块符号。",
+        "response_0": "{\"name\": \"null\", \"gender\": \"unknown\"}",
+        "response_json_0": {
+            "name": "null",
+            "gender": "unknown"
+        },
+        "time_cost": 9.004106998443604,
+        "ground_truth": {
+            "name": null,
+            "gender": "unknown"
+        },
+        "is_correct": false,
+        "error_reason": "name: 期望=None, 预测=null"
+    }
+]
