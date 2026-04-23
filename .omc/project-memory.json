@@ -1,0 +1,395 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776922889044,
+  "projectRoot": "/Users/djh/Documents/备份/一般/工作/代码/LLM/github/Virtual-Coach",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "pyproject.toml"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "pytest",
+        "version": null,
+        "category": "testing"
+      }
+    ],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": "pytest",
+    "lintCommand": "ruff check",
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "code": {
+      "path": "code",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1776922889031,
+      "keyFiles": [
+        "__init__.py",
+        "main.py",
+        "readme.md"
+      ]
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 1,
+      "lastAccessed": 1776922889032,
+      "keyFiles": []
+    },
+    "paper": {
+      "path": "paper",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776922889032,
+      "keyFiles": []
+    },
+    "code/models": {
+      "path": "code/models",
+      "purpose": "Data models",
+      "fileCount": 6,
+      "lastAccessed": 1776922889033,
+      "keyFiles": [
+        "__init__.py",
+        "api_keys.py",
+        "api_keys_template.py"
+      ]
+    },
+    "code/utils": {
+      "path": "code/utils",
+      "purpose": "Utility functions",
+      "fileCount": 3,
+      "lastAccessed": 1776922889033,
+      "keyFiles": [
+        "__init__.py",
+        "auto_generate_llm_call.py",
+        "validate_json.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "main.py",
+      "accessCount": 14,
+      "lastAccessed": 1776925711019,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 8,
+      "lastAccessed": 1776924510524,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/cli_utils.py",
+      "accessCount": 5,
+      "lastAccessed": 1776925865410,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/eval_runner.py",
+      "accessCount": 4,
+      "lastAccessed": 1776925635367,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/eval_code_generator.py",
+      "accessCount": 4,
+      "lastAccessed": 1776925648395,
+      "type": "file"
+    },
+    {
+      "path": "code/eval/eval_prompt_DecisionScenario1.py",
+      "accessCount": 3,
+      "lastAccessed": 1776924037501,
+      "type": "file"
+    },
+    {
+      "path": "code/models/glm_4_7_flash.py",
+      "accessCount": 3,
+      "lastAccessed": 1776924037556,
+      "type": "file"
+    },
+    {
+      "path": "code/utils/auto_generate_llm_call.py",
+      "accessCount": 3,
+      "lastAccessed": 1776924037612,
+      "type": "file"
+    },
+    {
+      "path": "code/models/api_keys.py",
+      "accessCount": 3,
+      "lastAccessed": 1776924037667,
+      "type": "file"
+    },
+    {
+      "path": "data/prompt/DecisionScenario1.py",
+      "accessCount": 3,
+      "lastAccessed": 1776924037719,
+      "type": "file"
+    },
+    {
+      "path": "code/models/__init__.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923676841,
+      "type": "file"
+    },
+    {
+      "path": "code/models/glm_4_air.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923676863,
+      "type": "file"
+    },
+    {
+      "path": "code/models/api_keys_template.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923676897,
+      "type": "file"
+    },
+    {
+      "path": "code/models/kedaxunfei_x1.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923676917,
+      "type": "file"
+    },
+    {
+      "path": "code/eval/eval_prompt_DecisionScenario5.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923683735,
+      "type": "file"
+    },
+    {
+      "path": "data/eval/DecisionScenario1.json",
+      "accessCount": 2,
+      "lastAccessed": 1776923696668,
+      "type": "file"
+    },
+    {
+      "path": "data/prompt/DecisionScenario2.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923696681,
+      "type": "file"
+    },
+    {
+      "path": "code/eval/__init__.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923703701,
+      "type": "file"
+    },
+    {
+      "path": "code/agent/MetadataAgent.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923703754,
+      "type": "file"
+    },
+    {
+      "path": "pyproject.toml",
+      "accessCount": 2,
+      "lastAccessed": 1776923703916,
+      "type": "file"
+    },
+    {
+      "path": "data/prompt/DecisionScenario5.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923712304,
+      "type": "file"
+    },
+    {
+      "path": "code/eval/eval_prompt_DecisionScenario2.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923712340,
+      "type": "file"
+    },
+    {
+      "path": "code/utils/__init__.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923724553,
+      "type": "file"
+    },
+    {
+      "path": "code/utils/validate_json.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923724604,
+      "type": "file"
+    },
+    {
+      "path": "data/eval/DecisionScenario2.json",
+      "accessCount": 2,
+      "lastAccessed": 1776923735705,
+      "type": "file"
+    },
+    {
+      "path": "code/eval/eval_prompt_DecisionScenario3.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923735759,
+      "type": "file"
+    },
+    {
+      "path": "data/eval/DecisionScenario3.json",
+      "accessCount": 2,
+      "lastAccessed": 1776923740740,
+      "type": "file"
+    },
+    {
+      "path": "data/prompt/DecisionScenario3.py",
+      "accessCount": 2,
+      "lastAccessed": 1776923740801,
+      "type": "file"
+    },
+    {
+      "path": "code/models/utils/normalize_string.py",
+      "accessCount": 1,
+      "lastAccessed": 1776923344928,
+      "type": "file"
+    },
+    {
+      "path": "data/prompt/DecisionScenario4.py",
+      "accessCount": 1,
+      "lastAccessed": 1776923356560,
+      "type": "file"
+    },
+    {
+      "path": "code/eval/eval_prompt_DecisionScenario4.py",
+      "accessCount": 1,
+      "lastAccessed": 1776923356590,
+      "type": "file"
+    },
+    {
+      "path": "code/agent/config/model.txt",
+      "accessCount": 1,
+      "lastAccessed": 1776923368512,
+      "type": "file"
+    },
+    {
+      "path": "data/eval_result/DecisionScenario1_result_20250910_193159.json",
+      "accessCount": 1,
+      "lastAccessed": 1776923368586,
+      "type": "file"
+    },
+    {
+      "path": "data/eval/DecisionScenario4.json",
+      "accessCount": 1,
+      "lastAccessed": 1776923368634,
+      "type": "file"
+    },
+    {
+      "path": "code/agent/config/model_all.txt",
+      "accessCount": 1,
+      "lastAccessed": 1776923368664,
+      "type": "file"
+    },
+    {
+      "path": "code/prompts/metadata_agent.py",
+      "accessCount": 1,
+      "lastAccessed": 1776923368794,
+      "type": "file"
+    },
+    {
+      "path": "code/__init__.py",
+      "accessCount": 1,
+      "lastAccessed": 1776923683635,
+      "type": "file"
+    },
+    {
+      "path": "code/agent/__init__.py",
+      "accessCount": 1,
+      "lastAccessed": 1776923703806,
+      "type": "file"
+    },
+    {
+      "path": "data/eval_result/DecisionScenario1_result_20250910_185648.json",
+      "accessCount": 1,
+      "lastAccessed": 1776923712285,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1776923724660,
+      "type": "directory"
+    },
+    {
+      "path": "code/prompts/__init__.py",
+      "accessCount": 1,
+      "lastAccessed": 1776923735652,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/__init__.py",
+      "accessCount": 1,
+      "lastAccessed": 1776924060379,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/json_utils.py",
+      "accessCount": 1,
+      "lastAccessed": 1776924060568,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/model_resolver.py",
+      "accessCount": 1,
+      "lastAccessed": 1776924122810,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/version_manager.py",
+      "accessCount": 1,
+      "lastAccessed": 1776924189764,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/prompt_generator.py",
+      "accessCount": 1,
+      "lastAccessed": 1776924189955,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/eval_data_generator.py",
+      "accessCount": 1,
+      "lastAccessed": 1776924190155,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline/optimizer.py",
+      "accessCount": 1,
+      "lastAccessed": 1776924272152,
+      "type": "file"
+    },
+    {
+      "path": "code/pipeline",
+      "accessCount": 1,
+      "lastAccessed": 1776925623403,
+      "type": "directory"
+    }
+  ],
+  "userDirectives": []
+}
